@@ -1,5 +1,5 @@
 /*
-! tailwindcss v3.3.3 | MIT License | https://tailwindcss.com
+! tailwindcss v3.3.6 | MIT License | https://tailwindcss.com
 */
 
 /*
@@ -121,8 +121,10 @@ strong {
 }
 
 /*
-1. Use the user's configured `mono` font family by default.
-2. Correct the odd `em` font sizing in all browsers.
+1. Use the user's configured `mono` font-family by default.
+2. Use the user's configured `mono` font-feature-settings by default.
+3. Use the user's configured `mono` font-variation-settings by default.
+4. Correct the odd `em` font sizing in all browsers.
 */
 
 code,
@@ -131,8 +133,12 @@ samp,
 pre {
   font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
   /* 1 */
-  font-size: 1em;
+  font-feature-settings: normal;
   /* 2 */
+  font-variation-settings: normal;
+  /* 3 */
+  font-size: 1em;
+  /* 4 */
 }
 
 /*
@@ -581,34 +587,6 @@ body{
   }
 }
 
-.btn {
-  cursor: pointer;
-  border-radius: 10px;
-  --tw-bg-opacity: 1;
-  background-color: rgb(59 183 126 / var(--tw-bg-opacity));
-  padding-left: 35px;
-  padding-right: 35px;
-  padding-top: 20px;
-  padding-bottom: 20px;
-  font-family: Quicksand, sans-serif;
-  font-size: 16px;
-  line-height: 24px;
-  letter-spacing: 0;
-  font-weight: 400;
-  --tw-text-opacity: 1;
-  color: rgb(255 255 255 / var(--tw-text-opacity));
-  --tw-shadow: 14px 14px 36px 0px rgba(85, 85, 85, 0.1);
-  --tw-shadow-colored: 14px 14px 36px 0px var(--tw-shadow-color);
-  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
-}
-
-.btn:hover {
-  --tw-bg-opacity: 1;
-  background-color: rgb(129 177 61 / var(--tw-bg-opacity));
-  --tw-text-opacity: 1;
-  color: rgb(255 255 255 / var(--tw-text-opacity));
-}
-
 .badge {
   display: inline-block;
   border-top-right-radius: 30px;
@@ -717,6 +695,10 @@ input[type=number] {
   top: 195px;
 }
 
+.z-10 {
+  z-index: 10;
+}
+
 .z-20 {
   z-index: 20;
 }
@@ -738,8 +720,40 @@ input[type=number] {
   margin-bottom: 0.25rem;
 }
 
+.mb-10 {
+  margin-bottom: 2.5rem;
+}
+
+.mb-16 {
+  margin-bottom: 4rem;
+}
+
 .mb-2 {
   margin-bottom: 0.5rem;
+}
+
+.mb-6 {
+  margin-bottom: 1.5rem;
+}
+
+.mb-8 {
+  margin-bottom: 2rem;
+}
+
+.mb-9 {
+  margin-bottom: 2.25rem;
+}
+
+.mb-\[120px\] {
+  margin-bottom: 120px;
+}
+
+.mb-\[125px\] {
+  margin-bottom: 125px;
+}
+
+.mb-\[270px\] {
+  margin-bottom: 270px;
 }
 
 .mb-\[28px\] {
@@ -748,6 +762,10 @@ input[type=number] {
 
 .mb-\[30px\] {
   margin-bottom: 30px;
+}
+
+.mb-\[320px\] {
+  margin-bottom: 320px;
 }
 
 .mb-\[33px\] {
@@ -802,6 +820,10 @@ input[type=number] {
   margin-top: 2rem;
 }
 
+.mt-\[100px\] {
+  margin-top: 100px;
+}
+
 .mt-\[15px\] {
   margin-top: 15px;
 }
@@ -820,6 +842,10 @@ input[type=number] {
 
 .mt-\[47px\] {
   margin-top: 47px;
+}
+
+.mt-\[70px\] {
+  margin-top: 70px;
 }
 
 .inline-block {
@@ -854,6 +880,10 @@ input[type=number] {
   aspect-ratio: 1 / 1;
 }
 
+.h-16 {
+  height: 4rem;
+}
+
 .h-3\/4 {
   height: 75%;
 }
@@ -874,6 +904,10 @@ input[type=number] {
   height: 30px;
 }
 
+.h-\[380px\] {
+  height: 380px;
+}
+
 .h-\[438px\] {
   height: 438px;
 }
@@ -886,8 +920,17 @@ input[type=number] {
   height: 60px;
 }
 
+.h-\[65px\] {
+  height: 65px;
+}
+
 .h-\[70px\] {
   height: 70px;
+}
+
+.h-fit {
+  height: -moz-fit-content;
+  height: fit-content;
 }
 
 .h-full {
@@ -910,8 +953,16 @@ input[type=number] {
   width: 106px;
 }
 
+.w-\[115px\] {
+  width: 115px;
+}
+
 .w-\[20px\] {
   width: 20px;
+}
+
+.w-\[370px\] {
+  width: 370px;
 }
 
 .w-\[500px\] {
@@ -935,12 +986,28 @@ input[type=number] {
   width: max-content;
 }
 
+.w-48 {
+  width: 12rem;
+}
+
+.w-\[480px\] {
+  width: 480px;
+}
+
+.min-w-\[480px\] {
+  min-width: 480px;
+}
+
 .max-w-\[346px\] {
   max-width: 346px;
 }
 
 .max-w-\[370px\] {
   max-width: 370px;
+}
+
+.max-w-\[480px\] {
+  max-width: 480px;
 }
 
 .max-w-\[550px\] {
@@ -977,8 +1044,26 @@ input[type=number] {
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
 
+.translate-y-1\/2 {
+  --tw-translate-y: 50%;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+
+.translate-y-\[182px\] {
+  --tw-translate-y: 182px;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+
 .cursor-pointer {
   cursor: pointer;
+}
+
+.list-inside {
+  list-style-position: inside;
+}
+
+.list-disc {
+  list-style-type: disc;
 }
 
 .grid-cols-2 {
@@ -1025,12 +1110,20 @@ input[type=number] {
   gap: 0.25rem;
 }
 
+.gap-14 {
+  gap: 3.5rem;
+}
+
 .gap-2 {
   gap: 0.5rem;
 }
 
 .gap-2\.5 {
   gap: 0.625rem;
+}
+
+.gap-20 {
+  gap: 5rem;
 }
 
 .gap-3 {
@@ -1051,6 +1144,10 @@ input[type=number] {
 
 .gap-6 {
   gap: 1.5rem;
+}
+
+.gap-\[100px\] {
+  gap: 100px;
 }
 
 .gap-\[16px\] {
@@ -1081,6 +1178,10 @@ input[type=number] {
 
 .overflow-hidden {
   overflow: hidden;
+}
+
+.whitespace-pre-line {
+  white-space: pre-line;
 }
 
 .rounded-\[10px\] {
@@ -1127,6 +1228,10 @@ input[type=number] {
   border-top-left-radius: 10px;
 }
 
+.border {
+  border-width: 1px;
+}
+
 .border-0 {
   border-width: 0px;
 }
@@ -1150,6 +1255,11 @@ input[type=number] {
 
 .border-t-2 {
   border-top-width: 2px;
+}
+
+.border-\[\#F2F3F4\] {
+  --tw-border-opacity: 1;
+  border-color: rgb(242 243 244 / var(--tw-border-opacity));
 }
 
 .border-gray-200 {
@@ -1187,6 +1297,16 @@ input[type=number] {
   border-right-color: rgb(59 183 126 / var(--tw-border-opacity));
 }
 
+.bg-\[\#000000\] {
+  --tw-bg-opacity: 1;
+  background-color: rgb(0 0 0 / var(--tw-bg-opacity));
+}
+
+.bg-\[\#1877F2\] {
+  --tw-bg-opacity: 1;
+  background-color: rgb(24 119 242 / var(--tw-bg-opacity));
+}
+
 .bg-\[\#3BB77E\] {
   --tw-bg-opacity: 1;
   background-color: rgb(59 183 126 / var(--tw-bg-opacity));
@@ -1207,8 +1327,18 @@ input[type=number] {
   background-color: rgb(253 192 64 / var(--tw-bg-opacity));
 }
 
+.bg-\[\#FFFFFF\] {
+  --tw-bg-opacity: 1;
+  background-color: rgb(255 255 255 / var(--tw-bg-opacity));
+}
+
 .bg-\[rgba\(59\2c 128\2c 126\2c \.2\)\] {
   background-color: rgba(59,128,126,.2);
+}
+
+.bg-blue-300 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(37 61 78 / var(--tw-bg-opacity));
 }
 
 .bg-gray-200 {
@@ -1313,6 +1443,15 @@ input[type=number] {
   padding: 3px;
 }
 
+.p-\[50px\] {
+  padding: 50px;
+}
+
+.px-11 {
+  padding-left: 2.75rem;
+  padding-right: 2.75rem;
+}
+
 .px-2 {
   padding-left: 0.5rem;
   padding-right: 0.5rem;
@@ -1326,6 +1465,11 @@ input[type=number] {
 .px-8 {
   padding-left: 2rem;
   padding-right: 2rem;
+}
+
+.px-9 {
+  padding-left: 2.25rem;
+  padding-right: 2.25rem;
 }
 
 .px-\[10px\] {
@@ -1361,6 +1505,11 @@ input[type=number] {
 .py-4 {
   padding-top: 1rem;
   padding-bottom: 1rem;
+}
+
+.py-6 {
+  padding-top: 1.5rem;
+  padding-bottom: 1.5rem;
 }
 
 .py-\[15px\] {
@@ -1410,6 +1559,10 @@ input[type=number] {
   padding-left: 26px;
 }
 
+.pl-\[80px\] {
+  padding-left: 80px;
+}
+
 .pr-2 {
   padding-right: 0.5rem;
 }
@@ -1440,6 +1593,10 @@ input[type=number] {
 
 .pt-\[38px\] {
   padding-top: 38px;
+}
+
+.pt-\[70px\] {
+  padding-top: 70px;
 }
 
 .text-center {
@@ -1480,20 +1637,6 @@ input[type=number] {
 
 .text-\[30px\] {
   font-size: 30px;
-}
-
-.text-display1 {
-  font-size: 96px;
-  line-height: 128px;
-  letter-spacing: 0;
-  font-weight: 700;
-}
-
-.text-display2 {
-  font-size: 72px;
-  line-height: 96px;
-  letter-spacing: 0;
-  font-weight: 700;
 }
 
 .text-heading-sm {
@@ -1577,6 +1720,14 @@ input[type=number] {
   font-weight: 700;
 }
 
+.uppercase {
+  text-transform: uppercase;
+}
+
+.lowercase {
+  text-transform: lowercase;
+}
+
 .leading-5 {
   line-height: 1.25rem;
 }
@@ -1592,6 +1743,26 @@ input[type=number] {
 .text-\[\#2B3D34\] {
   --tw-text-opacity: 1;
   color: rgb(43 61 52 / var(--tw-text-opacity));
+}
+
+.text-\[\#3F7C35\] {
+  --tw-text-opacity: 1;
+  color: rgb(63 124 53 / var(--tw-text-opacity));
+}
+
+.text-\[\#7E396B\] {
+  --tw-text-opacity: 1;
+  color: rgb(126 57 107 / var(--tw-text-opacity));
+}
+
+.text-\[\#ADA05B\] {
+  --tw-text-opacity: 1;
+  color: rgb(173 160 91 / var(--tw-text-opacity));
+}
+
+.text-\[\#C14A83\] {
+  --tw-text-opacity: 1;
+  color: rgb(193 74 131 / var(--tw-text-opacity));
 }
 
 .text-blue-300 {
@@ -1642,10 +1813,6 @@ input[type=number] {
   --tw-shadow: 5px 5px 15px 0px rgba(24, 24, 24, 0.05);
   --tw-shadow-colored: 5px 5px 15px 0px var(--tw-shadow-color);
   box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
-}
-
-.outline {
-  outline-style: solid;
 }
 
 .hover\:cursor-default:hover {
