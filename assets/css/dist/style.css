@@ -1,5 +1,5 @@
 /*
-! tailwindcss v3.3.3 | MIT License | https://tailwindcss.com
+! tailwindcss v3.3.6 | MIT License | https://tailwindcss.com
 */
 
 /*
@@ -121,8 +121,10 @@ strong {
 }
 
 /*
-1. Use the user's configured `mono` font family by default.
-2. Correct the odd `em` font sizing in all browsers.
+1. Use the user's configured `mono` font-family by default.
+2. Use the user's configured `mono` font-feature-settings by default.
+3. Use the user's configured `mono` font-variation-settings by default.
+4. Correct the odd `em` font sizing in all browsers.
 */
 
 code,
@@ -131,8 +133,12 @@ samp,
 pre {
   font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
   /* 1 */
-  font-size: 1em;
+  font-feature-settings: normal;
   /* 2 */
+  font-variation-settings: normal;
+  /* 3 */
+  font-size: 1em;
+  /* 4 */
 }
 
 /*
@@ -581,34 +587,6 @@ body{
   }
 }
 
-.btn {
-  cursor: pointer;
-  border-radius: 10px;
-  --tw-bg-opacity: 1;
-  background-color: rgb(59 183 126 / var(--tw-bg-opacity));
-  padding-left: 35px;
-  padding-right: 35px;
-  padding-top: 20px;
-  padding-bottom: 20px;
-  font-family: Quicksand, sans-serif;
-  font-size: 16px;
-  line-height: 24px;
-  letter-spacing: 0;
-  font-weight: 400;
-  --tw-text-opacity: 1;
-  color: rgb(255 255 255 / var(--tw-text-opacity));
-  --tw-shadow: 14px 14px 36px 0px rgba(85, 85, 85, 0.1);
-  --tw-shadow-colored: 14px 14px 36px 0px var(--tw-shadow-color);
-  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
-}
-
-.btn:hover {
-  --tw-bg-opacity: 1;
-  background-color: rgb(129 177 61 / var(--tw-bg-opacity));
-  --tw-text-opacity: 1;
-  color: rgb(255 255 255 / var(--tw-text-opacity));
-}
-
 .badge {
   display: inline-block;
   border-top-right-radius: 30px;
@@ -669,12 +647,20 @@ input[type=number] {
   -moz-appearance: textfield;
 }
 
+.rotate-180{
+  transform: rotate(180deg);
+}
+
 .absolute {
   position: absolute;
 }
 
 .relative {
   position: relative;
+}
+
+.sticky {
+  position: sticky;
 }
 
 .-right-\[10px\] {
@@ -715,6 +701,10 @@ input[type=number] {
 
 .top-\[195px\] {
   top: 195px;
+}
+
+.right-10 {
+  right: 2.5rem;
 }
 
 .z-20 {
@@ -822,6 +812,26 @@ input[type=number] {
   margin-top: 47px;
 }
 
+.mr-\[68px\] {
+  margin-right: 68px;
+}
+
+.mr-\[20px\] {
+  margin-right: 20px;
+}
+
+.mr-\[48px\] {
+  margin-right: 48px;
+}
+
+.mr-\[28px\] {
+  margin-right: 28px;
+}
+
+.mb-20 {
+  margin-bottom: 5rem;
+}
+
 .inline-block {
   display: inline-block;
 }
@@ -852,6 +862,10 @@ input[type=number] {
 
 .aspect-square {
   aspect-ratio: 1 / 1;
+}
+
+.h-1\/4 {
+  height: 25%;
 }
 
 .h-3\/4 {
@@ -894,12 +908,44 @@ input[type=number] {
   height: 100%;
 }
 
+.h-\[696\.14px\] {
+  height: 696.14px;
+}
+
+.h-\[421px\] {
+  height: 421px;
+}
+
+.h-\[\] {
+  height: ;
+}
+
+.h-\[840\.62px\] {
+  height: 840.62px;
+}
+
+.h-\[840px\] {
+  height: 840px;
+}
+
+.h-\[646px\] {
+  height: 646px;
+}
+
+.h-\[117px\] {
+  height: 117px;
+}
+
 .max-h-\[50px\] {
   max-height: 50px;
 }
 
 .min-h-\[160px\] {
   min-height: 160px;
+}
+
+.w-1\/2 {
+  width: 50%;
 }
 
 .w-3\/4 {
@@ -933,6 +979,38 @@ input[type=number] {
 .w-max {
   width: -moz-max-content;
   width: max-content;
+}
+
+.w-\[646px\] {
+  width: 646px;
+}
+
+.w-\[586px\] {
+  width: 586px;
+}
+
+.w-4\/5 {
+  width: 80%;
+}
+
+.w-11\/12 {
+  width: 91.666667%;
+}
+
+.w-10\/12 {
+  width: 83.333333%;
+}
+
+.w-2\/3 {
+  width: 66.666667%;
+}
+
+.w-1\/4 {
+  width: 25%;
+}
+
+.w-40 {
+  width: 10rem;
 }
 
 .max-w-\[346px\] {
@@ -977,6 +1055,11 @@ input[type=number] {
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
 
+.rotate-180 {
+  --tw-rotate: 180deg;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+
 .cursor-pointer {
   cursor: pointer;
 }
@@ -987,6 +1070,10 @@ input[type=number] {
 
 .flex-row {
   flex-direction: row;
+}
+
+.flex-row-reverse {
+  flex-direction: row-reverse;
 }
 
 .flex-col {
@@ -1011,6 +1098,10 @@ input[type=number] {
 
 .justify-start {
   justify-content: flex-start;
+}
+
+.justify-end {
+  justify-content: flex-end;
 }
 
 .justify-center {
@@ -1063,6 +1154,10 @@ input[type=number] {
 
 .gap-\[30px\] {
   gap: 30px;
+}
+
+.gap-\[25px\] {
+  gap: 25px;
 }
 
 .gap-y-\[15px\] {
@@ -1123,8 +1218,24 @@ input[type=number] {
   border-radius: 0.75rem;
 }
 
+.rounded-\[15px\] {
+  border-radius: 15px;
+}
+
+.rounded {
+  border-radius: 0.25rem;
+}
+
+.rounded-2xl {
+  border-radius: 1rem;
+}
+
 .rounded-tl-\[10px\] {
   border-top-left-radius: 10px;
+}
+
+.border {
+  border-width: 1px;
 }
 
 .border-0 {
@@ -1185,6 +1296,11 @@ input[type=number] {
 .border-r-green-200 {
   --tw-border-opacity: 1;
   border-right-color: rgb(59 183 126 / var(--tw-border-opacity));
+}
+
+.border-b-blue-100 {
+  --tw-border-opacity: 1;
+  border-bottom-color: rgb(70 188 242 / var(--tw-border-opacity));
 }
 
 .bg-\[\#3BB77E\] {
@@ -1289,6 +1405,25 @@ input[type=number] {
   background-repeat: no-repeat;
 }
 
+.stroke-blue-100 {
+  stroke: #46BCF2;
+}
+
+.object-contain {
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+
+.object-left-top {
+  -o-object-position: left top;
+     object-position: left top;
+}
+
+.object-right-top {
+  -o-object-position: right top;
+     object-position: right top;
+}
+
 .p-12 {
   padding: 3rem;
 }
@@ -1311,6 +1446,10 @@ input[type=number] {
 
 .p-\[3px\] {
   padding: 3px;
+}
+
+.p-\[40px\] {
+  padding: 40px;
 }
 
 .px-2 {
@@ -1442,8 +1581,20 @@ input[type=number] {
   padding-top: 38px;
 }
 
+.text-left {
+  text-align: left;
+}
+
 .text-center {
   text-align: center;
+}
+
+.text-right {
+  text-align: right;
+}
+
+.text-end {
+  text-align: end;
 }
 
 .font-lato {
@@ -1482,30 +1633,9 @@ input[type=number] {
   font-size: 30px;
 }
 
-.text-display1 {
-  font-size: 96px;
-  line-height: 128px;
-  letter-spacing: 0;
-  font-weight: 700;
-}
-
-.text-display2 {
-  font-size: 72px;
-  line-height: 96px;
-  letter-spacing: 0;
-  font-weight: 700;
-}
-
 .text-heading-sm {
   font-size: 14px;
   line-height: 16px;
-  letter-spacing: 0;
-  font-weight: 700;
-}
-
-.text-heading1 {
-  font-size: 48px;
-  line-height: 64px;
   letter-spacing: 0;
   font-weight: 700;
 }
@@ -1520,13 +1650,6 @@ input[type=number] {
 .text-heading3 {
   font-size: 32px;
   line-height: 40px;
-  letter-spacing: 0;
-  font-weight: 700;
-}
-
-.text-heading4 {
-  font-size: 24px;
-  line-height: 32px;
   letter-spacing: 0;
   font-weight: 700;
 }
@@ -1624,6 +1747,11 @@ input[type=number] {
   color: rgb(255 255 255 / var(--tw-text-opacity));
 }
 
+.text-gray-200 {
+  --tw-text-opacity: 1;
+  color: rgb(229 229 229 / var(--tw-text-opacity));
+}
+
 .text-opacity-50 {
   --tw-text-opacity: 0.5;
 }
@@ -1642,10 +1770,6 @@ input[type=number] {
   --tw-shadow: 5px 5px 15px 0px rgba(24, 24, 24, 0.05);
   --tw-shadow-colored: 5px 5px 15px 0px var(--tw-shadow-color);
   box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
-}
-
-.outline {
-  outline-style: solid;
 }
 
 .hover\:cursor-default:hover {
