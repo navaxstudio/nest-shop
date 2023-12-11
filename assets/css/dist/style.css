@@ -720,6 +720,10 @@ input[type=number] {
   margin-bottom: 0.5rem;
 }
 
+.mb-6 {
+  margin-bottom: 1.5rem;
+}
+
 .mb-\[28px\] {
   margin-bottom: 28px;
 }
@@ -806,6 +810,42 @@ input[type=number] {
 
 .mt-\[47px\] {
   margin-top: 47px;
+}
+
+.mb-4 {
+  margin-bottom: 1rem;
+}
+
+.mb-\[22\] {
+  margin-bottom: 22;
+}
+
+.mb-\[22px\] {
+  margin-bottom: 22px;
+}
+
+.mb-\[\] {
+  margin-bottom: ;
+}
+
+.mb-\[34px\] {
+  margin-bottom: 34px;
+}
+
+.mb-\[228px\] {
+  margin-bottom: 228px;
+}
+
+.mr-\[px\] {
+  margin-right: px;
+}
+
+.mr-10 {
+  margin-right: 2.5rem;
+}
+
+.mr-3 {
+  margin-right: 0.75rem;
 }
 
 .inline-block {
@@ -1323,6 +1363,11 @@ input[type=number] {
   padding-right: 2rem;
 }
 
+.px-9 {
+  padding-left: 2.25rem;
+  padding-right: 2.25rem;
+}
+
 .px-\[10px\] {
   padding-left: 10px;
   padding-right: 10px;
@@ -1358,6 +1403,11 @@ input[type=number] {
   padding-bottom: 1rem;
 }
 
+.py-6 {
+  padding-top: 1.5rem;
+  padding-bottom: 1.5rem;
+}
+
 .py-\[15px\] {
   padding-top: 15px;
   padding-bottom: 15px;
@@ -1371,6 +1421,81 @@ input[type=number] {
 .py-\[5px\] {
   padding-top: 5px;
   padding-bottom: 5px;
+}
+
+.py-\[\] {
+  padding-top: ;
+  padding-bottom: ;
+}
+
+.py-\[500px\] {
+  padding-top: 500px;
+  padding-bottom: 500px;
+}
+
+.px-\[500px\] {
+  padding-left: 500px;
+  padding-right: 500px;
+}
+
+.px-\[550px\] {
+  padding-left: 550px;
+  padding-right: 550px;
+}
+
+.px-\[0px\] {
+  padding-left: 0px;
+  padding-right: 0px;
+}
+
+.px-\[8000px\] {
+  padding-left: 8000px;
+  padding-right: 8000px;
+}
+
+.px-\[800px\] {
+  padding-left: 800px;
+  padding-right: 800px;
+}
+
+.px-\[80px\] {
+  padding-left: 80px;
+  padding-right: 80px;
+}
+
+.px-\[300px\] {
+  padding-left: 300px;
+  padding-right: 300px;
+}
+
+.px-\[330px\] {
+  padding-left: 330px;
+  padding-right: 330px;
+}
+
+.px-\[350px\] {
+  padding-left: 350px;
+  padding-right: 350px;
+}
+
+.px-\[370px\] {
+  padding-left: 370px;
+  padding-right: 370px;
+}
+
+.px-\[360px\] {
+  padding-left: 360px;
+  padding-right: 360px;
+}
+
+.py-1 {
+  padding-top: 0.25rem;
+  padding-bottom: 0.25rem;
+}
+
+.py-5 {
+  padding-top: 1.25rem;
+  padding-bottom: 1.25rem;
 }
 
 .pb-1 {
@@ -1435,6 +1560,66 @@ input[type=number] {
 
 .pt-\[38px\] {
   padding-top: 38px;
+}
+
+.pr-\[\] {
+  padding-right: ;
+}
+
+.pr-\[9\] {
+  padding-right: 9;
+}
+
+.pr-\[98px\] {
+  padding-right: 98px;
+}
+
+.pl-\[\] {
+  padding-left: ;
+}
+
+.pl-\[15\] {
+  padding-left: 15;
+}
+
+.pl-\[16px\] {
+  padding-left: 16px;
+}
+
+.pl-\[40px\] {
+  padding-left: 40px;
+}
+
+.pl-\[5px\] {
+  padding-left: 5px;
+}
+
+.pl-\[50px\] {
+  padding-left: 50px;
+}
+
+.pr-\[10bpx\] {
+  padding-right: 10bpx;
+}
+
+.pr-\[108px\] {
+  padding-right: 108px;
+}
+
+.pr-\[130px\] {
+  padding-right: 130px;
+}
+
+.pr-\[16px\] {
+  padding-right: 16px;
+}
+
+.pr-\[160px\] {
+  padding-right: 160px;
+}
+
+.pr-\[170px\] {
+  padding-right: 170px;
 }
 
 .text-center {
@@ -1538,6 +1723,13 @@ input[type=number] {
   line-height: 18px;
   letter-spacing: 0;
   font-weight: 400;
+}
+
+.text-display2 {
+  font-size: 72px;
+  line-height: 96px;
+  letter-spacing: 0;
+  font-weight: 700;
 }
 
 .font-bold {
