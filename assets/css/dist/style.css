@@ -1784,6 +1784,26 @@ input[type=number] {
   box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
 }
 
+.outline {
+  outline-style: solid;
+}
+
+.outline-\[9px\] {
+  outline-width: 9px;
+}
+
+.-outline-offset-\[9px\] {
+  outline-offset: -9px;
+}
+
+.outline-gray-400 {
+  outline-color: #B6B6B6;
+}
+
+.outline-green-200 {
+  outline-color: #3BB77E;
+}
+
 .hover\:cursor-default:hover {
   cursor: default;
 }
