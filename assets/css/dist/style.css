@@ -651,6 +651,9 @@ input[type=number] {
   -moz-appearance: textfield;
 }
 
+.asdf {
+}
+
 .absolute {
   position: absolute;
 }
