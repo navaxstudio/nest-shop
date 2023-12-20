@@ -138,6 +138,9 @@ module.exports = {
         400: '#3A882B',
         500: '#227226',
         600: '#1A5D2C'
+      },
+      brown:{
+        500: "#F0E8D5"
       }
     },
     container: {
