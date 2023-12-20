@@ -1,6 +1,6 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  content: ["./*.html"],
+  content: ["./**/*.html"],
   theme: {
     extend: {
       aspectRatio: {
@@ -112,6 +112,7 @@ module.exports = {
       ],
     },
     colors:{
+      transparent: 'rgba(1,1,1,0)',
       red: '#ef4f4f',
       white: '#FFFFFF',
       gray:{
