@@ -50,8 +50,8 @@ new Swiper('.products_slider', {
     spaceBetween: 16,
     autoplay: true,
     breakpoints: {
-        '640': {
-            slidesPerView: 2,
+        '768': {
+            slidesPerView: 3,
             spaceBetween: 18,
         },
         '1024': {
@@ -64,13 +64,13 @@ new Swiper('.products_slider', {
         },
     }
 });
-new Swiper('.best-seller-slider', {
+new Swiper('.our-offer-slider', {
     slidesPerView: 2,
     spaceBetween: 16,
     autoplay: true,
     breakpoints: {
-        '640': {
-            slidesPerView: 2,
+        '768': {
+            slidesPerView: 3,
             spaceBetween: 18,
         },
         '1024': {
@@ -81,15 +81,19 @@ new Swiper('.best-seller-slider', {
 });
 
 new Swiper('.deals-slider', {
-    slidesPerView: 2,
+    slidesPerView: 1,
     spaceBetween: 16,
     autoplay: true,
     breakpoints: {
-        '640': {
+        '768': {
             slidesPerView: 2,
             spaceBetween: 18,
         },
         '1024': {
+            slidesPerView: 3,
+            spaceBetween: 22,
+        },
+        '1280': {
             slidesPerView: 4,
             spaceBetween: 22,
         }
@@ -102,13 +106,17 @@ new Swiper('.top-sliders', {
     loop: true,
     autoplay: true,
     breakpoints: {
-        '640': {
+        '768': {
             slidesPerView: 2,
             spaceBetween: 18,
         },
         '1024': {
-            slidesPerView: 4,
+            slidesPerView: 3,
             spaceBetween: 18,
+        },
+        '1280': {
+            slidesPerView: 4,
+            spaceBetween: 22,
         }
     }
 });
