@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Shop Tailwind</title>
+
+        <meta charset="UTF-8">
+        <meta name="viewport" content= "width=device-width, initial-scale=1.0">
+
+        <link rel="icon" href="assets/icons/favicon/icon.png"/>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Lato&family=Quicksand:wght@700&display=swap" rel="stylesheet">
+
+        <link rel="stylesheet" href="assets/vendor/normalize/normalize.css" />
+        <link rel="stylesheet" href="assets/vendor/swiper/swiper-bundle.min.css" />
+        <link rel="stylesheet" href="assets/css/icons.css"/>
+        <link rel="stylesheet" href="assets/css/dist/style.css"/>
+
+    </head>
+    <body>
+        <header class="mb-[33px]">
+            <div class="container flex items-center justify-between py-4 md:py-6 xl:py-8">
+                <img src="assets/icons/logo/Logo.png" alt="logo" width="215" height="66" />
+                <div class="border-2 border-green-150 rounded-[5px] w-[700px] px-[15px]">
+                    <form name="search-form" action="#" method="post" class="flex items-center">
+                        <input type="text" name="search_text" placeholder="Search for items" class="text-xsmall text-gray-400 border-gray-300 w-full py-[15px] focus:outline-none"/>
+                        <button type="submit"><i class="icon-search text-[22px]" ></i></button>
+                    </form>
+                </div>
+                <ul class="flex gap-5">
+                    <li class="flex gap-2 cursor-pointer">
+                       <a href="#" ><i class="icon-user text-[24px]" ></i></a>
+                        <div class="hidden xl:inline-block text-medium text-gray-500  font-lato">Account</div>
+                    </li>
+                    <li class="flex gap-2 cursor-pointer ">
+                        <div class="relative">
+                            <span class="absolute -top-[10px] -right-[10px] w-[20px] h-[20px] bg-green-200 rounded-full flex justify-center items-center text-white text-xsmall">4</span>
+                            <a href="#" ><i class="icon-shopping-cart text-[24px]"></i></a>
+                        </div>
+                        <div class="hidden xl:inline-block text-medium text-gray-500  font-lato">Card</div>
+                    </li>
+                </ul>
+<!--                <i  id="menu_btn" class="icon-menu text-[24px] lg:hidden inline-block"></i>-->
+                <img id="menu_btn" src="assets/icons/menu.svg" width="26" height="24" class="lg:hidden inline-block" />
+            </div>
+
+            <div class="border-gray-200 border-y">
+                <div class="container lg:flex hidden flex-row justify-between items-center h-[70px]">
+
+                    <div id="all_categories" class="flex relative cursor-pointer bg-green-200  gap-2.5 text-white px-4 py-3 rounded-[5px] items-center ">
+                        <a href="#" ><i class="icon-apps text-[24px]"></i></a>
+                        <div class="text-medium">Browse All Categories</div>
+                        <i class="icon-angle-small-down text-[24px]"></i>
+                        <div id="all_categories_box" class="hidden absolute z-20 bg-white left-0 top-16 w-[500px] rounded-[5px] border-[1px] border-green-300 p-[30px] hover:cursor-default">
+                            <div id="all_cat_inner_box" class="flex flex-wrap justify-between gap-y-[15px]">
+                                <a href="#"
+                                   class="flex items-center gap-3.5 rounded-[5px] lg:border-[1px] lg:border-gray-300 py-2.5 basis-[calc(50%-8px)] justify-start pl-4 lg:hover:border-green-300 cursor-pointer">
+                                    <img src="assets/icons/glocery_vector/031-groceries%201.png" width="30"
+                                         height="30"/>
+                                    <div class="font-quickSand text-heading-sm text-blue-300">Milks and Dairies</div>
+                                </a>
+                                <a href="#"
+                                   class="flex items-center gap-3.5 rounded-[5px] lg:border-[1px] lg:border-gray-300 py-2.5 basis-[calc(50%-8px)] justify-start pl-4 lg:hover:border-green-300 cursor-pointer">
+                                    <img src="assets/icons/glocery_vector/004-drinks%201.png" width="30"
+                                         height="30"/>
+                                    <div class="font-quickSand text-heading-sm text-blue-300">Wines & Drinks</div>
+                                </a>
+                                <a href="#"
+                                   class="flex items-center gap-3.5 rounded-[5px] lg:border-[1px] lg:border-gray-300 py-2.5 basis-[calc(50%-8px)] justify-start pl-4 lg:hover:border-green-300 cursor-pointer">
+                                    <img src="assets/icons/glocery_vector/044-dress%201.png" width="30"
+                                         height="30"/>
+                                    <div class="font-quickSand text-heading-sm text-blue-300">Clothing & beauty</div>
+                                </a>
+                                <a href="#"
+                                   class="flex items-center gap-3.5 rounded-[5px] lg:border-[1px] lg:border-gray-300 py-2.5 basis-[calc(50%-8px)] justify-start pl-4 lg:hover:border-green-300 cursor-pointer">
+                                    <img src="assets/icons/glocery_vector/026-crab%201.png" width="30"
+                                         height="30"/>
+                                    <div class="font-quickSand text-heading-sm text-blue-300">Fresh Seafood</div>
+                                </a>
+                                <a href="#"
+                                   class="flex items-center gap-3.5 rounded-[5px] lg:border-[1px] lg:border-gray-300 py-2.5 basis-[calc(50%-8px)] justify-start pl-4 lg:hover:border-green-300 cursor-pointer">
+                                    <img src="assets/icons/glocery_vector/021-pet%20food%201.png" width="30"
+                                         height="30"/>
+                                    <div class="font-quickSand text-heading-sm text-blue-300">Pet Foods & Toy</div>
+                                </a>
+                                <a href="#"
+                                   class="flex items-center gap-3.5 rounded-[5px] lg:border-[1px] lg:border-gray-300 py-2.5 basis-[calc(50%-8px)] justify-start pl-4 lg:hover:border-green-300 cursor-pointer">
+                                    <img src="assets/icons/glocery_vector/001-sweet%201.png" width="30"
+                                         height="30"/>
+                                    <div class="font-quickSand text-heading-sm text-blue-300">Fast food</div>
+                                </a>
+                                <a href="#"
+                                   class="flex items-center gap-3.5 rounded-[5px] lg:border-[1px] lg:border-gray-300 py-2.5 basis-[calc(50%-8px)] justify-start pl-4 lg:hover:border-green-300 cursor-pointer">
+                                    <img src="assets/icons/glocery_vector/006-dairy%20products%201.png" width="30"
+                                         height="30"/>
+                                    <div class="font-quickSand text-heading-sm text-blue-300">Baking material</div>
+                                </a>
+                                <a href="#"
+                                   class="flex items-center gap-3.5 rounded-[5px] lg:border-[1px] lg:border-gray-300 py-2.5 basis-[calc(50%-8px)] justify-start pl-4 lg:hover:border-green-300 cursor-pointer">
+                                    <img src="assets/icons/glocery_vector/032-grocery%201.png" width="30"
+                                         height="30"/>
+                                    <div class="font-quickSand text-heading-sm text-blue-300">Vegetables</div>
+                                </a>
+                                <a href="#"
+                                   class="flex items-center gap-3.5 rounded-[5px] lg:border-[1px] lg:border-gray-300 py-2.5 basis-[calc(50%-8px)] justify-start pl-4 lg:hover:border-green-300 cursor-pointer">
+                                    <img src="assets/icons/glocery_vector/009-fruit%201.png" width="30"
+                                         height="30"/>
+                                    <div class="font-quickSand text-heading-sm text-blue-300">Fresh Fruit</div>
+                                </a>
+                                <a href="#"
+                                   class="flex items-center gap-3.5 rounded-[5px] lg:border-[1px] lg:border-gray-300 py-2.5 basis-[calc(50%-8px)] justify-start pl-4 lg:hover:border-green-300 cursor-pointer">
+                                    <img src="assets/icons/glocery_vector/Group%2018.png" width="30"
+                                         height="30"/>
+                                    <div class="font-quickSand text-heading-sm text-blue-300">Bread and Juice</div>
+                                </a>
+                                <div id="more_categories"
+                                     class="cursor-pointer flex gap-4 items-center justify-center w-full mt-[17px]">
+                                    <i class="icon-add text-[24px]" ></i>
+                                    <div
+                                            class="font-quickSand text-heading-sm text-blue-300">More
+                                        Categories</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <nav id="main_menu">
+                        <ul class="flex items-center font-quickSand text-heading6 lg:text-heading-sm 2xl:text-heading6 lg:gap-3 xl:gap-5 2xl:gap-10">
+                            <li >
+                                <a href="#" class="flex flex-row gap-2 items-center">
+                                    <i class="icon-flame text-[24px]"></i>
+                                    <div class="font-quickSand text-heading6 lg:text-heading-sm xl:text-heading6">Hot Deals</div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="flex items-center gap-1">Home</a>
+                            </li>
+                            <li>
+                                <a href="#" class="flex flex-row">Food</a>
+                            </li>
+                            <li>
+                                <a href="#" class="flex flex-row">Vegetables</a>
+                            </li>
+                        </ul>
+                    </nav>
+
+                    <div class="flex items-center shrink-0 gap-3">
+                        <a href="#" ><i class="icon-headset text-[30px]  xl:text-[32px] 2xl:text-[36px] aspect-square"></i></a>
+                        <div>
+                            <a href="tel:19008888" class="text-green-200 font-quickSand lg:text-heading6 xl:text-heading5 2xl:text-heading4">1900-8888</a>
+                            <div class="font-lato text-xsmall"><span class="hidden xl:inline-block">24/7 </span>Support Center</div>
+                        </div>
+                    </div>
+                    <!--<div class="flex lg:hidden items-center w-full justify-between">
+                        <img src="assets/icons/fi-rs-search.svg" width="24" height="25"/>
+                        <ul class="flex pt-2.5 gap-5 shrink-0">
+                            <li class="flex gap-1 items-end">
+                                <img src="assets/icons/fi-rs-user.svg" width="24" height="25" class="pb-1"/>
+                                <div
+                                        class="hidden xl:inline-block text-medium text-gray-500 font-lato text-opacity-50">Account
+                                </div>
+                            </li>
+                            <li class="flex gap-1 items-end">
+                                <img src="assets/icons/fi-rs-heart.svg" width="24" height="25" class="pb-1"/>
+                                <div
+                                        class="hidden xl:inline-block text-medium text-gray-500 font-lato text-opacity-50">WishList
+                                </div>
+                            </li>
+                            <li class="flex gap-1 items-end">
+                                <img src="assets/icons/fi-rs-shopping-cart.svg" width="24" height="25" class="pb-1"/>
+                                <div
+                                        class="hidden xl:inline-block text-medium text-gray-500 font-lato text-opacity-50">Card
+                                </div>
+                            </li>
+                        </ul>
+                    </div>-->
+                </div>
+            </div>
+        </header>
+
+        <main>
+            <!--Banner section-->
+            <section class="mb-[68px] container">
+                <div class="rounded-[6px] md:rounded-[14px] lg:rounded-[30px] bg-hero-pattern bg-[rgba(59,128,126,.2)] bg-opacity-20 bg-cover bg-top bg-no-repeat flex justify-between items-center mt-[38px] relative">
+                    <div class="min-h-[160px] pl-3 pt-3 sm:pl-4 sm:pt4 md:pl-6 md:pt-6 lg:pl-10 lg:py-10 xl:pl-14 xl:py-14 2xl:py-[72px] 2xl:pl-[72px]">
+                        <h2 class="max-w-[60%] font-quickSand text-heading5 sm:text-heading4 md:text-heading3 lg:text-heading2 tracking-[-0.04%] text-blue-300">Stay home & get your daily needs from our shop </h2>
+                        <div class="font-lato text-large tracking-[-0.04%] text-[#2B3D34] mt-8 hidden lg:block">Start Your Daily Sopping with Nest Mart</div>
+                    </div>
+                    <img src="assets/images/Screenshot (76).png" class="absolute bottom-0 right-0 sm:h-full h-3/4" />
+                </div>
+            </section>
+
+        </main>
+
+        <footer class="container mb-[68px]">
+            <!--footer-->
+            <div class="flex flex-col md:flex-row justify-between flex-wrap gap-[16px] divide-y-2 md:divide-y-0 mb-[70px]">
+                <div class="max-w-[346px] ">
+                    <img src="assets/icons/logo/Logo.png" alt="logo" width="215" height="66"/>
+                    <div class="font-lato text-medium mt-4 lg:mt-6">Pellentesque posuere orci lobortis</div>
+                    <div class="flex items-start gap-2.5 mt-4 lg:mt-6">
+                        <i class="icon-marker-brand"></i>
+                        <div class="font-lato text-medium text-blue-300"><span class="font-bold">Address:</span> 5171 W Campbell Ave undefined Kent, Utah 53127 United
+                            States</div>
+                    </div>
+                    <div class="flex items-start gap-2.5 mt-2 lg:mt-3">
+                        <i class="icon-headset text-brand1"></i>
+                        <div class="font-lato text-medium text-blue-300"><span class="font-bold">Call Us:</span> (+91) - 540-025-124553 </div>
+                    </div>
+                    <div class="flex items-start gap-2.5 mt-2 lg:mt-3">
+                        <i class="icon-paper-plane text-[24px] text-brand1"></i>
+                        <div class="font-lato text-medium text-blue-300"><span class="font-bold">Email:</span> contact@nestmart.com</div>
+                    </div>
+                    <div class="flex items-start gap-2.5 mt-2 lg:mt-3">
+                        <i class="icon-time-fast text-brand1"></i>
+                        <div class="font-lato text-medium text-blue-300"><span class="font-bold">Hours:</span> 10:00 - 18:00, Mon - Sat </div>
+                    </div>
+
+                </div>
+                <div class="pt-4 md:pt-0">
+                    <div class="flex font-quickSand text-heading6 md:text-heading5 lg:text-heading4 xl:text-heading4 text-blue-300 toggle">Company <i class="icon-down-dark text-[24px] inline-block sm:hidden "></i></div>
+                    <ul class="hidden md:flex flex-col gap-2.5">
+                        <li class="font-lato text-medium text-blue-300 mt-4 lg:mt-6"><a href="#">About Us</a></li>
+                        <li class="font-lato text-medium text-blue-300"><a href="#">Delivery Information</a> </li>
+                        <li class="font-lato text-medium text-blue-300"><a href="#">Privacy Policy</a></li>
+                        <li class="font-lato text-medium text-blue-300"><a href="#">Terms & Conditions</a></li>
+                        <li class="font-lato text-medium text-blue-300"><a href="#">Contact Us</a></li>
+                        <li class="font-lato text-medium text-blue-300"><a href="#">Support Center</a></li>
+                        <li class="font-lato text-medium text-blue-300"><a href="#">Careers</a></li>
+                    </ul>
+                </div>
+                <div class="pt-4 md:pt-0">
+                    <div class="flex font-quickSand text-heading6 md:text-heading5 lg:text-heading4 xl:text-heading4 text-blue-300 toggle">Information <i class="icon-down-dark text-[24px] inline-block sm:hidden"></i></div>
+                    <ul class="hidden md:flex flex-col gap-2.5">
+                        <li class="font-lato text-medium text-blue-300 mt-4 lg:mt-6"><a href="#">Search Terms</a></li>
+                        <li class="font-lato text-medium text-blue-300"><a href="#">Advanced Search</a></li>
+                        <li class="font-lato text-medium text-blue-300"><a href="#">Help & FAQ's</a></li>
+                        <li class="font-lato text-medium text-blue-300"><a href="#">Store Location</a></li>
+                        <li class="font-lato text-medium text-blue-300"><a href="#">Orders & Returns</a></li>
+                        <li class="font-lato text-medium text-blue-300"><a href="#">Feedback for us</a></li>
+                    </ul>
+                </div>
+                <div class="pt-4 md:pt-0">
+                    <div class="font-quickSand text-heading6 md:text-heading5 lg:text-heading4 xl:text-heading4 text-blue-300">App & Payment</div>
+                    <div class="font-lato text-small text-blue-300 mt-4 lg:mt-6">Install NetMart App from App Store or Google Play</div>
+                    <div class="flex items-center gap-6 justify-center xl:justify-start pt-4 lg:pt-5">
+                        <a href="#"><img src="assets/images/va724oeh 1.png" alt="Download app from apple store" width="129" height="39" /></a>
+                        <a href="#"><img src="assets/images/17kw6njp 1.png" alt="Download app from google play" width="129" height="39" /></a>
+                    </div>
+                    <div class="font-lato text-small text-blue-300 text-center lg:text-left  pt-4 lg:pt-5">Secured Payment
+                        Gateways</div>
+                    <div class="flex justify-center xl:justify-start pt-4 lg:pt-5">
+                        <img src="assets/images/payment-method%201.png" alt="payment methods" width="225" height="33" />
+                    </div>
+                </div>
+            </div>
+
+            <!--copyright-->
+            <div class="flex justify-center border-t-2 py-[38px] border-green-100">
+                <div class="font-lato text-medium text-blue-300">© 2021, <span class="text-green-200">NestMart</span> - HTML Ecommerce Template</div>
+            </div>
+        </footer>
+
+        <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+        <script src="assets/script/main.js"></script>
+
+    </body>
+</html>
