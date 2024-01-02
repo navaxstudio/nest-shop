@@ -67,6 +67,10 @@
   content: "\e90b";
   color: #fff;
 }
+.icon-arrow-small-left:before {
+  content: "\e90";
+  color: #fff;
+}
 .icon-bell:before {
   content: "\e90c";
 }
