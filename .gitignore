@@ -1,2 +1,4 @@
 node_modules/*
 .idea/*
+.vscode
+assets/css/dist/style.css
