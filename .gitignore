@@ -4,3 +4,7 @@ node_modules/*
 assets/css/dist/style.css
 package-lock.json
 yarn.lock
+.DS_Store
+assets/.DS_Store
+assets/font/.DS_Store
+assets/vendor/.DS_Store
