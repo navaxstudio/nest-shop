@@ -157,3 +157,11 @@
 .icon-time-forward-ten:before {
   content: "\e926";
 }
+.icon-home:before {
+  content: "\e900";
+}
+
+.icon-pencil:before {
+  content: "\e905";
+}
+
