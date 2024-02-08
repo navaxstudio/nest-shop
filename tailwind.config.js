@@ -14,149 +14,149 @@ module.exports = {
       backgroundImage: {
         'hero-pattern': "url('../../images/banner_bg.png')",
         'hero-img': "url('../../images/hero-img.png')"
-      }
-    },
-    fontFamily: {
-      quickSand: ['Quicksand', 'sans-serif'],
-      lato: ['Lato', 'sans-serif']
-    },
-    fontSize: {
-      display1: [
-        '96px',
-        {
-          lineHeight: '128px',
-          letterSpacing: '0',
-          fontWeight: '700'
-        }
-      ],
-      display2: [
-        '72px',
-        {
-          lineHeight: '96px',
-          letterSpacing: '0',
-          fontWeight: '700'
-        }
-      ],
-      heading1: [
-        '48px',
-        {
-          lineHeight: '64px',
-          letterSpacing: '0',
-          fontWeight: '700'
-        }
-      ],
-      heading2: [
-        '40px',
-        {
-          lineHeight: '48px',
-          letterSpacing: '0',
-          fontWeight: '700'
-        }
-      ],
-      heading3: [
-        '32px',
-        {
-          lineHeight: '40px',
-          letterSpacing: '0',
-          fontWeight: '700'
-        }
-      ],
-      heading4: [
-        '24px',
-        {
-          lineHeight: '32px',
-          letterSpacing: '0',
-          fontWeight: '700'
-        }
-      ],
-      heading5: [
-        '20px',
-        {
-          lineHeight: '24px',
-          letterSpacing: '0',
-          fontWeight: '700'
-        }
-      ],
-      heading6: [
-        '16px',
-        {
-          lineHeight: '20px',
-          letterSpacing: '0',
-          fontWeight: '700'
-        }
-      ],
-      'heading-sm': [
-        '14px',
-        {
-          lineHeight: '16px',
-          letterSpacing: '0',
-          fontWeight: '700'
-        }
-      ],
-      large: [
-        '18px',
-        {
-          lineHeight: '26px',
-          letterSpacing: '0',
-          fontWeight: '400'
-        }
-      ],
-      medium: [
-        '16px',
-        {
-          lineHeight: '24px',
-          letterSpacing: '0',
-          fontWeight: '400'
-        }
-      ],
-      small: [
-        '14px',
-        {
-          lineHeight: '21px',
-          letterSpacing: '0',
-          fontWeight: '400'
-        }
-      ],
-      xsmall: [
-        '12px',
-        {
-          lineHeight: '18px',
-          letterSpacing: '0',
-          fontWeight: '400'
-        }
-      ]
-    },
-    colors: {
-      transparent: 'rgba(1,1,1,0)',
-      red: '#ef4f4f',
-      white: '#FFFFFF',
-      gray: {
-        100: '#F4F6FA',
-        200: '#E5E5E5',
-        300: '#CACACA',
-        400: '#B6B6B6',
-        500: '#7e7e7e'
       },
-      yellow: {
-        100: '#F6C065',
-        200: '#FDC040'
+      fontFamily: {
+        quickSand: ['Quicksand', 'sans-serif'],
+        lato: ['Lato', 'sans-serif']
       },
-      blue: {
-        100: '#46BCF2',
-        200: '#008891',
-        300: '#253D4E'
+      fontSize: {
+        display1: [
+          '96px',
+          {
+            lineHeight: '128px',
+            letterSpacing: '0',
+            fontWeight: '700'
+          }
+        ],
+        display2: [
+          '72px',
+          {
+            lineHeight: '96px',
+            letterSpacing: '0',
+            fontWeight: '700'
+          }
+        ],
+        heading1: [
+          '48px',
+          {
+            lineHeight: '64px',
+            letterSpacing: '0',
+            fontWeight: '700'
+          }
+        ],
+        heading2: [
+          '40px',
+          {
+            lineHeight: '48px',
+            letterSpacing: '0',
+            fontWeight: '700'
+          }
+        ],
+        heading3: [
+          '32px',
+          {
+            lineHeight: '40px',
+            letterSpacing: '0',
+            fontWeight: '700'
+          }
+        ],
+        heading4: [
+          '24px',
+          {
+            lineHeight: '32px',
+            letterSpacing: '0',
+            fontWeight: '700'
+          }
+        ],
+        heading5: [
+          '20px',
+          {
+            lineHeight: '24px',
+            letterSpacing: '0',
+            fontWeight: '700'
+          }
+        ],
+        heading6: [
+          '16px',
+          {
+            lineHeight: '20px',
+            letterSpacing: '0',
+            fontWeight: '700'
+          }
+        ],
+        'heading-sm': [
+          '14px',
+          {
+            lineHeight: '16px',
+            letterSpacing: '0',
+            fontWeight: '700'
+          }
+        ],
+        large: [
+          '18px',
+          {
+            lineHeight: '26px',
+            letterSpacing: '0',
+            fontWeight: '400'
+          }
+        ],
+        medium: [
+          '16px',
+          {
+            lineHeight: '24px',
+            letterSpacing: '0',
+            fontWeight: '400'
+          }
+        ],
+        small: [
+          '14px',
+          {
+            lineHeight: '21px',
+            letterSpacing: '0',
+            fontWeight: '400'
+          }
+        ],
+        xsmall: [
+          '12px',
+          {
+            lineHeight: '18px',
+            letterSpacing: '0',
+            fontWeight: '400'
+          }
+        ]
       },
-      green: {
-        100: '#F2FCE4',
-        150: '#BCE3C9',
-        200: '#3BB77E',
-        300: '#81B13D',
-        400: '#3A882B',
-        500: '#227226',
-        600: '#1A5D2C'
-      },
-      brown: {
-        500: '#F0E8D5'
+      colors: {
+        transparent: 'rgba(1,1,1,0)',
+        red: '#ef4f4f',
+        white: '#FFFFFF',
+        gray: {
+          100: '#F4F6FA',
+          200: '#E5E5E5',
+          300: '#CACACA',
+          400: '#B6B6B6',
+          500: '#7e7e7e'
+        },
+        yellow: {
+          100: '#F6C065',
+          200: '#FDC040'
+        },
+        blue: {
+          100: '#46BCF2',
+          200: '#008891',
+          300: '#253D4E'
+        },
+        green: {
+          100: '#F2FCE4',
+          150: '#BCE3C9',
+          200: '#3BB77E',
+          300: '#81B13D',
+          400: '#3A882B',
+          500: '#227226',
+          600: '#1A5D2C'
+        },
+        brown: {
+          500: '#F0E8D5'
+        }
       }
     },
     container: {

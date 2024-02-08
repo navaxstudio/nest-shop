@@ -47,6 +47,10 @@ new Swiper('.products_slider', {
   slidesPerView: 2,
   spaceBetween: 16,
   autoplay: true,
+  navigation: {
+    nextEl: document.querySelector('.swiper-nav-left'),
+    prevEl: document.querySelector('.swiper-nav-right')
+  },
   breakpoints: {
     768: {
       slidesPerView: 3,
@@ -62,7 +66,30 @@ new Swiper('.products_slider', {
     }
   }
 });
-new Swiper('.our-offer-slider', {
+new Swiper('.products_slider2', {
+  slidesPerView: 2,
+  spaceBetween: 16,
+  autoplay: true,
+  navigation: {
+    nextEl: document.querySelector('.swiper-nav-left2'),
+    prevEl: document.querySelector('.swiper-nav-right2')
+  },
+  breakpoints: {
+    768: {
+      slidesPerView: 3,
+      spaceBetween: 18
+    },
+    1024: {
+      slidesPerView: 4,
+      spaceBetween: 22
+    },
+    1280: {
+      slidesPerView: 5,
+      spaceBetween: 24
+    }
+  }
+});
+new Swiper('.best-seller-slider', {
   slidesPerView: 2,
   spaceBetween: 16,
   autoplay: true,
@@ -160,3 +187,52 @@ document.querySelectorAll('.toggle').forEach((element) => {
     }
   };
 });
+
+document.getElementById('menu_btn').onclick = (e) => {
+  e.stopPropagation();
+  document.querySelector('.mobile-menu').style.left = 0;
+  document.querySelector('body').classList.add('overflow-hidden');
+};
+document.querySelector('.mobile-menu').onclick = (e) => {
+  e.stopPropagation();
+};
+
+document.querySelector('html').onclick = (e) => {
+  document.querySelector('.mobile-menu').style.removeProperty('left');
+  document.querySelector('body').classList.remove('overflow-hidden');
+};
+
+const timer = (selector, end) => {
+  const calcRemaining = (end) => {
+    const endDate = new Date(end).getTime();
+    const currentDate = new Date().getTime();
+
+    const timeRemaining = endDate - currentDate;
+
+    const timeobj = {
+      days: 0,
+      hours: 0,
+      minutes: 0,
+      seconds: 0
+    };
+
+    if (timeRemaining > 0) {
+      timeobj.days = Math.floor(timeRemaining / (1000 * 60 * 60 * 24));
+      timeobj.hours = Math.floor((timeRemaining % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+      timeobj.minutes = Math.floor((timeRemaining % (1000 * 60 * 60)) / (1000 * 60));
+      timeobj.seconds = Math.floor((timeRemaining % (1000 * 60)) / 1000);
+    }
+    return timeobj;
+  };
+
+  setInterval(() => {
+    const remainTime = calcRemaining(end);
+    const box = document.querySelector(selector);
+    box.querySelector('.day').innerText = remainTime.days;
+    box.querySelector('.hour').innerText = remainTime.hours;
+    box.querySelector('.minute').innerText = remainTime.minutes;
+    box.querySelector('.second').innerText = remainTime.seconds;
+  }, 1000);
+};
+
+timer('.timer1', '2024-02-01 12:20:10');

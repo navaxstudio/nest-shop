@@ -11,7 +11,6 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Lato&family=Quicksand:wght@700&display=swap" rel="stylesheet" />
 
-    <link rel="stylesheet" href="../assets/vendor/normalize/normalize.css" />
     <link rel="stylesheet" href="../assets/vendor/swiper/swiper-bundle.min.css" />
     <link rel="stylesheet" href="../assets/css/icons.css" />
     <link rel="stylesheet" href="../assets/css/dist/style.css" />
@@ -19,14 +18,14 @@
   <body>
     <header class="mb-[33px]">
       <div class="container flex items-center justify-between py-4 md:py-6 xl:py-8">
-        <img src="../assets/images/Logo.png" alt="logo" width="215" height="66" />
-        <div class="border-2 border-green-150 rounded-[5px] w-[700px] px-[15px]">
+        <img src="../assets/images/Logo.png" class="w-[117px] lg:w-[242px]" alt="logo" width="242" height="66" />
+        <div class="border-2 border-green-150 rounded-[5px] max-w-[700px] w-full mx-[15px] px-[15px] hidden lg:inline-block">
           <form name="search-form" action="#" method="post" class="flex items-center">
             <input type="text" name="search_text" placeholder="Search for items" class="text-xsmall text-gray-400 border-gray-300 w-full py-[15px] focus:outline-none" />
             <button type="submit"><i class="icon-search text-[22px]"></i></button>
           </form>
         </div>
-        <ul class="flex gap-5">
+        <ul class="hidden lg:flex gap-5">
           <li class="flex gap-2 cursor-pointer">
             <a href="#"><i class="icon-user text-[24px]"></i></a>
             <div class="hidden xl:inline-block text-medium text-gray-500 font-lato">Account</div>
@@ -39,12 +38,15 @@
             <div class="hidden xl:inline-block text-medium text-gray-500 font-lato">Card</div>
           </li>
         </ul>
-        <!--                <i  id="menu_btn" class="icon-menu text-[24px] lg:hidden inline-block"></i>-->
-        <img id="menu_btn" src="../assets/icons/menu.svg" width="26" height="24" class="lg:hidden inline-block" />
+        <button id="menu_btn" class="flex flex-col justify-between py-[4px] lg:hidden w-[24px] h-[24px]">
+          <span class="w-full h-[1.5px] bg-black inline-block rounded"></span>
+          <span class="w-full h-[1.5px] bg-black inline-block rounded"></span>
+          <span class="w-full h-[1.5px] bg-black inline-block rounded"></span>
+        </button>
       </div>
 
-      <div class="border-gray-200 border-y">
-        <div class="container lg:flex hidden flex-row justify-between items-center h-[70px]">
+      <div class="border-gray-200 border-y h">
+        <div class="container transition-all w-4/5 rounded-[24px] lg:rounded-[0px] lg:w-auto flex absolute top-0 bottom-0 -left-[100%] lg:static flex-col lg:flex-row justify-start lg:justify-between items-start pt-[16px] pl-[24px] lg:py-[13px] lg:items-center h-[100vh] bg-white lg:h-[70px] mobile-menu z-50">
           <div id="all_categories" class="flex relative cursor-pointer bg-green-200 gap-2.5 text-white px-4 py-3 rounded-[5px] items-center">
             <a href="#"><i class="icon-apps text-[24px]"></i></a>
             <div class="text-medium">Browse All Categories</div>
@@ -52,58 +54,58 @@
             <div id="all_categories_box" class="hidden absolute z-20 bg-white left-0 top-16 w-[500px] rounded-[5px] border-[1px] border-green-300 p-[30px] hover:cursor-default">
               <div id="all_cat_inner_box" class="flex flex-wrap justify-between gap-y-[15px]">
                 <a href="#" class="flex items-center gap-3.5 rounded-[5px] lg:border-[1px] lg:border-gray-300 py-2.5 basis-[calc(50%-8px)] justify-start pl-4 lg:hover:border-green-300 cursor-pointer">
-                  <img src="../assets/icons/glocery_vector/031-groceries%201.png" width="30" height="30" />
-                  <div class="font-quickSand text-heading-sm text-blue-300">Milks and Dairies</div>
+                  <i class="icon-groceries-1 text-[30px]"><span class="path1"></span><span class="path2"></span><span class="path3"></span><span class="path4"></span><span class="path5"></span><span class="path6"></span><span class="path7"></span></i>
+                  <div class="text-heading-sm text-blue-300">Milks and Dairies</div>
                 </a>
                 <a href="#" class="flex items-center gap-3.5 rounded-[5px] lg:border-[1px] lg:border-gray-300 py-2.5 basis-[calc(50%-8px)] justify-start pl-4 lg:hover:border-green-300 cursor-pointer">
-                  <img src="../assets/icons/glocery_vector/004-drinks%201.png" width="30" height="30" />
-                  <div class="font-quickSand text-heading-sm text-blue-300">Wines & Drinks</div>
+                  <i class="icon-drinks-1 text-[30px]"><span class="path1"></span><span class="path2"></span><span class="path3"></span><span class="path4"></span><span class="path5"></span></i>
+                  <div class="text-heading-sm text-blue-300">Wines & Drinks</div>
                 </a>
                 <a href="#" class="flex items-center gap-3.5 rounded-[5px] lg:border-[1px] lg:border-gray-300 py-2.5 basis-[calc(50%-8px)] justify-start pl-4 lg:hover:border-green-300 cursor-pointer">
-                  <img src="../assets/icons/glocery_vector/044-dress%201.png" width="30" height="30" />
-                  <div class="font-quickSand text-heading-sm text-blue-300">Clothing & beauty</div>
+                  <i class="icon-dress-1 text-[30px]"><span class="path1"></span><span class="path2"></span><span class="path3"></span><span class="path4"></span></i>
+                  <div class="text-heading-sm text-blue-300">Clothing & beauty</div>
                 </a>
                 <a href="#" class="flex items-center gap-3.5 rounded-[5px] lg:border-[1px] lg:border-gray-300 py-2.5 basis-[calc(50%-8px)] justify-start pl-4 lg:hover:border-green-300 cursor-pointer">
-                  <img src="../assets/icons/glocery_vector/026-crab%201.png" width="30" height="30" />
-                  <div class="font-quickSand text-heading-sm text-blue-300">Fresh Seafood</div>
+                  <i class="icon-crab-1 text-[30px]"><span class="path1"></span><span class="path2"></span><span class="path3"></span><span class="path4"></span><span class="path5"></span><span class="path6"></span><span class="path7"></span><span class="path8"></span><span class="path9"></span></i>
+                  <div class="text-heading-sm text-blue-300">Fresh Seafood</div>
                 </a>
                 <a href="#" class="flex items-center gap-3.5 rounded-[5px] lg:border-[1px] lg:border-gray-300 py-2.5 basis-[calc(50%-8px)] justify-start pl-4 lg:hover:border-green-300 cursor-pointer">
-                  <img src="../assets/icons/glocery_vector/021-pet%20food%201.png" width="30" height="30" />
-                  <div class="font-quickSand text-heading-sm text-blue-300">Pet Foods & Toy</div>
+                  <i class="icon-pet-food-1 text-[30px]"><span class="path1"></span><span class="path2"></span><span class="path3"></span><span class="path4"></span><span class="path5"></span><span class="path6"></span><span class="path7"></span><span class="path8"></span></i>
+                  <div class="text-heading-sm text-blue-300">Pet Foods & Toy</div>
                 </a>
                 <a href="#" class="flex items-center gap-3.5 rounded-[5px] lg:border-[1px] lg:border-gray-300 py-2.5 basis-[calc(50%-8px)] justify-start pl-4 lg:hover:border-green-300 cursor-pointer">
-                  <img src="../assets/icons/glocery_vector/001-sweet%201.png" width="30" height="30" />
-                  <div class="font-quickSand text-heading-sm text-blue-300">Fast food</div>
+                  <i class="icon-sweet-1 text-[30px]"><span class="path1"></span><span class="path2"></span><span class="path3"></span><span class="path4"></span><span class="path5"></span><span class="path6"></span><span class="path7"></span></i>
+                  <div class="text-heading-sm text-blue-300">Fast food</div>
                 </a>
                 <a href="#" class="flex items-center gap-3.5 rounded-[5px] lg:border-[1px] lg:border-gray-300 py-2.5 basis-[calc(50%-8px)] justify-start pl-4 lg:hover:border-green-300 cursor-pointer">
-                  <img src="../assets/icons/glocery_vector/006-dairy%20products%201.png" width="30" height="30" />
-                  <div class="font-quickSand text-heading-sm text-blue-300">Baking material</div>
+                  <i class="icon-dairy-products-1 text-[30px]"><span class="path1"></span><span class="path2"></span><span class="path3"></span><span class="path4"></span><span class="path5"></span></i>
+                  <div class="text-heading-sm text-blue-300">Baking material</div>
                 </a>
                 <a href="#" class="flex items-center gap-3.5 rounded-[5px] lg:border-[1px] lg:border-gray-300 py-2.5 basis-[calc(50%-8px)] justify-start pl-4 lg:hover:border-green-300 cursor-pointer">
-                  <img src="../assets/icons/glocery_vector/032-grocery%201.png" width="30" height="30" />
-                  <div class="font-quickSand text-heading-sm text-blue-300">Vegetables</div>
+                  <i class="icon-grocery-1 text-[30px]"><span class="path1"></span><span class="path2"></span><span class="path3"></span><span class="path4"></span><span class="path5"></span><span class="path6"></span><span class="path7"></span></i>
+                  <div class="text-heading-sm text-blue-300">Vegetables</div>
                 </a>
                 <a href="#" class="flex items-center gap-3.5 rounded-[5px] lg:border-[1px] lg:border-gray-300 py-2.5 basis-[calc(50%-8px)] justify-start pl-4 lg:hover:border-green-300 cursor-pointer">
-                  <img src="../assets/icons/glocery_vector/009-fruit%201.png" width="30" height="30" />
-                  <div class="font-quickSand text-heading-sm text-blue-300">Fresh Fruit</div>
+                  <i class="icon-fruit-1 text-[30px]"><span class="path1"></span><span class="path2"></span><span class="path3"></span></i>
+                  <div class="text-heading-sm text-blue-300">Fresh Fruit</div>
                 </a>
                 <a href="#" class="flex items-center gap-3.5 rounded-[5px] lg:border-[1px] lg:border-gray-300 py-2.5 basis-[calc(50%-8px)] justify-start pl-4 lg:hover:border-green-300 cursor-pointer">
-                  <img src="../assets/icons/glocery_vector/Group%2018.png" width="30" height="30" />
-                  <div class="font-quickSand text-heading-sm text-blue-300">Bread and Juice</div>
+                  <span class="icon-milk-products-1 text-[30px]"><span class="path1"></span><span class="path2"></span><span class="path3"></span><span class="path4"></span><span class="path5"></span></span>
+                  <div class="text-heading-sm text-blue-300">Bread and Juice</div>
                 </a>
                 <div id="more_categories" class="cursor-pointer flex gap-4 items-center justify-center w-full mt-[17px]">
                   <i class="icon-add text-[24px]"></i>
-                  <div class="font-quickSand text-heading-sm text-blue-300">More Categories</div>
+                  <div class="text-heading-sm text-blue-300">More Categories</div>
                 </div>
               </div>
             </div>
           </div>
           <nav id="main_menu">
-            <ul class="flex items-center font-quickSand text-heading6 lg:text-heading-sm 2xl:text-heading6 lg:gap-3 xl:gap-5 2xl:gap-10">
+            <ul class="flex flex-col lg:flex-row items-start lg:items-center text-heading6 lg:text-heading-sm 2xl:text-heading6 gap-[32px] mt-[32px] lg:mt-0 lg:gap-3 xl:gap-5 2xl:gap-10">
               <li>
                 <a href="#" class="flex flex-row gap-2 items-center">
                   <i class="icon-flame text-[24px]"></i>
-                  <div class="font-quickSand text-heading6 lg:text-heading-sm xl:text-heading6">Hot Deals</div>
+                  <div class="text-heading6 lg:text-heading-sm xl:text-heading6">Hot Deals</div>
                 </a>
               </li>
               <li>
@@ -118,36 +120,35 @@
             </ul>
           </nav>
 
-          <div class="flex items-center shrink-0 gap-3">
+          <div class="hidden lg:flex items-center shrink-0 gap-3">
             <a href="#"><i class="icon-headset text-[30px] xl:text-[32px] 2xl:text-[36px] aspect-square"></i></a>
             <div>
-              <a href="tel:19008888" class="text-green-200 font-quickSand lg:text-heading6 xl:text-heading5 2xl:text-heading4">1900-8888</a>
+              <a href="tel:19008888" class="text-green-200 lg:text-heading6 xl:text-heading5 2xl:text-heading4">1900-8888</a>
               <div class="font-lato text-xsmall"><span class="hidden xl:inline-block">24/7 </span>Support Center</div>
             </div>
           </div>
-          <!--<div class="flex lg:hidden items-center w-full justify-between">
-                        <img src="../assets/icons/fi-rs-search.svg" width="24" height="25"/>
-                        <ul class="flex pt-2.5 gap-5 shrink-0">
-                            <li class="flex gap-1 items-end">
-                                <img src="../assets/icons/fi-rs-user.svg" width="24" height="25" class="pb-1"/>
-                                <div
-                                        class="hidden xl:inline-block text-medium text-gray-500 font-lato text-opacity-50">Account
-                                </div>
-                            </li>
-                            <li class="flex gap-1 items-end">
-                                <img src="../assets/icons/fi-rs-heart.svg" width="24" height="25" class="pb-1"/>
-                                <div
-                                        class="hidden xl:inline-block text-medium text-gray-500 font-lato text-opacity-50">WishList
-                                </div>
-                            </li>
-                            <li class="flex gap-1 items-end">
-                                <img src="../assets/icons/fi-rs-shopping-cart.svg" width="24" height="25" class="pb-1"/>
-                                <div
-                                        class="hidden xl:inline-block text-medium text-gray-500 font-lato text-opacity-50">Card
-                                </div>
-                            </li>
-                        </ul>
-                    </div>-->
+        </div>
+
+        <div class="container flex justify-between lg:hidden pt-[20px] pb-[16px] items-end">
+          <div class="border-[1px] border-green-150 rounded-[5px] w-full max-w-[220px] p-[6px]">
+            <form name="search-form" action="#" method="post" class="flex items-center">
+              <input type="text" name="search_text" placeholder="Search for items" class="text-xsmall text-gray-400 border-gray-300 w-full focus:outline-none" />
+              <button type="submit"><i class="icon-search text-[16px]"></i></button>
+            </form>
+          </div>
+          <ul class="flex gap-5">
+            <li class="flex gap-2 cursor-pointer">
+              <a href="#"><i class="icon-user text-[24px]"></i></a>
+              <div class="hidden xl:inline-block text-medium text-gray-500 font-lato">Account</div>
+            </li>
+            <li class="flex gap-2 cursor-pointer">
+              <div class="relative">
+                <span class="absolute -top-[10px] -right-[10px] w-[20px] h-[20px] bg-green-200 rounded-full flex justify-center items-center text-white text-xsmall">4</span>
+                <a href="#"><i class="icon-shopping-cart text-[24px]"></i></a>
+              </div>
+              <div class="hidden xl:inline-block text-medium text-gray-500 font-lato">Card</div>
+            </li>
+          </ul>
         </div>
       </div>
     </header>
@@ -157,12 +158,12 @@
       <section class="container mb-[68px]">
         <div class="grid grid-cols-2 items-center rounded-lg bg-hero-pattern bg-[#FDC040] bg-opacity-20 bg-cover bg-no-repeat">
           <div class="pl-[20px] md:pl-[60px]">
-            <h2 class="font-quickSand text-heading5 sm:text-heading4 lg:text-heading2 xl:text-heading1 2xl:text-display2 text-blue-300 mb-[33px]">Don’t miss amazing grocery deals</h2>
-            <p class="text-gray-500 mb-[68px]">Sign up for the daily newsletter</p>
+            <h2 class="text-heading5 sm:text-heading4 lg:text-heading2 xl:text-heading1 2xl:text-display2 text-blue-300 mb-[33px]">Don’t miss amazing grocery deals</h2>
+            <p class="text-gray-500 mb-[68px] hidden md:inline-block">Sign up for the daily newsletter</p>
             <form method="post" action="#" class="hidden lg:flex rounded-[30px] pl-[26px] lg:w-[442px] w-full bg-white items-center">
               <i class="icon-paper-plane text-[24px]"></i>
               <input type="email" name="email" placeholder="Your email address" class="pl-2 font-lato text-xsmall grow focus:outline-none bg-transparent" />
-              <input type="submit" value="subscribe" class="text-white hover:bg-green-300 bg-green-200 rounded-[30px] px-[18px] py-2 sm:px-[37px] sm:py-[15px] cursor-pointer font-quickSand text-heading6" />
+              <input type="submit" value="subscribe" class="text-white hover:bg-green-300 bg-green-200 rounded-[30px] px-[18px] py-2 sm:px-[37px] sm:py-[15px] cursor-pointer text-heading6" />
             </form>
           </div>
           <img src="../assets/images/fresh-apples.png" class="m-w-[50%]" />
@@ -170,7 +171,7 @@
         <form name="subscription" method="post" action="#" class="flex lg:hidden gap-2.5 items-center justify-between rounded-[30px] mx-auto max-w-[550px] bg-[#F5F5F5] pl-4 sm:pl-5 md:pl-6 mt-4 sm:mt-5 md:mt-6">
           <a href="#"><i class="icon-paper-plane text-[24px]"></i></a>
           <input type="email" name="email" placeholder="Your email address" class="font-lato text-xsmall sm:grow focus:outline-none bg-transparent" />
-          <input type="submit" value="subscribe" class="text-white hover:bg-green-300 bg-green-200 rounded-[30px] px-[18px] py-2 cursor-pointer font-quickSand text-heading-sm leading-5 md:text-heading6" />
+          <input type="submit" value="subscribe" class="text-white hover:bg-green-300 bg-green-200 rounded-[30px] px-[18px] py-2 cursor-pointer text-heading-sm leading-5 md:text-heading6" />
         </form>
       </section>
       <!-- Hero Section End -->
@@ -178,57 +179,57 @@
       <!-- Featured Categories Section Start -->
       <section class="container mb-[75px]">
         <div class="hidden sm:flex mb-[50px]">
-          <h2 class="font-quickSand text-heading3 text-blue-300">Featured Categories</h2>
+          <h2 class="text-heading3 text-blue-300">Featured Categories</h2>
         </div>
         <div class="flex flex-wrap justify-between gap-[24px]">
           <a href="#" class="flex flex-col justify-center items-center text-blue-300 bg-green-100 border-[1px] border-green-100 hover:border-green-300 px-2 lg:px-5 py-3 pt-2 rounded-xl">
             <img src="../assets/images/featured/cake-milch.png" width="93" height="84" alt="cat" class="mb-2 lg:mb-4" />
-            <h3 class="font-quickSand text-[12px] text-bold sm:text-heading-sm md:text-heading6 text-center">Cake & Milk</h3>
+            <h3 class="text-[12px] text-bold sm:text-heading-sm md:text-heading6 text-center">Cake & Milk</h3>
             <span class="text-xsmall text-gray-400 hidden lg:flex">14 items</span>
           </a>
-          <a href="#" class="flex flex-col justify-center items-center text-blue-300 bg-green-100 border-[1px] border-green-100 hover:border-green-300 px-2 lg:px-5 py-3 pt-2 rounded-xl">
+          <a href="#" class="flex flex-col justify-center items-center text-blue-300 bg-[#FFFCEB] border-[1px] border-green-100 hover:border-green-300 px-2 lg:px-5 py-3 pt-2 rounded-xl">
             <img src="../assets/images/featured/peach.png" width="93" height="84" alt="cat" class="mb-2 lg:mb-4" />
-            <h3 class="font-quickSand text-[12px] text-bold sm:text-heading-sm md:text-heading6 text-center">Peach</h3>
+            <h3 class="text-[12px] text-bold sm:text-heading-sm md:text-heading6 text-center">Peach</h3>
             <span class="text-xsmall text-gray-400 hidden lg:flex">17 items</span>
           </a>
-          <a href="#" class="flex flex-col justify-center items-center text-blue-300 bg-green-100 border-[1px] border-green-100 hover:border-green-300 px-2 lg:px-5 py-3 pt-2 rounded-xl">
+          <a href="#" class="flex flex-col justify-center items-center text-blue-300 bg-[#ECFFEC] border-[1px] border-green-100 hover:border-green-300 px-2 lg:px-5 py-3 pt-2 rounded-xl">
             <img src="../assets/images/featured/organic-kiwi.png" width="93" height="84" alt="cat" class="mb-2 lg:mb-4" />
-            <h3 class="font-quickSand text-[12px] text-bold sm:text-heading-sm md:text-heading6 text-center">Oganic Kiwi</h3>
+            <h3 class="text-[12px] text-bold sm:text-heading-sm md:text-heading6 text-center">Oganic Kiwi</h3>
             <span class="text-xsmall text-gray-400 hidden lg:flex">21 items</span>
           </a>
-          <a href="#" class="flex flex-col justify-center items-center text-blue-300 bg-green-100 border-[1px] border-green-100 hover:border-green-300 px-2 lg:px-5 py-3 pt-2 rounded-xl">
+          <a href="#" class="flex flex-col justify-center items-center text-blue-300 bg-[#FEEFEA] border-[1px] border-green-100 hover:border-green-300 px-2 lg:px-5 py-3 pt-2 rounded-xl">
             <img src="../assets/images/featured/red-apple.png" width="93" height="84" alt="cat" class="mb-2 lg:mb-4" />
-            <h3 class="font-quickSand text-[12px] text-bold sm:text-heading-sm md:text-heading6 text-center">Red Apple</h3>
+            <h3 class="text-[12px] text-bold sm:text-heading-sm md:text-heading6 text-center">Red Apple</h3>
             <span class="text-xsmall text-gray-400 hidden lg:flex">68 items</span>
           </a>
-          <a href="#" class="flex flex-col justify-center items-center text-blue-300 bg-green-100 border-[1px] border-green-100 hover:border-green-300 px-2 lg:px-5 py-3 pt-2 rounded-xl">
+          <a href="#" class="flex flex-col justify-center items-center text-blue-300 bg-[#FFF3EB] border-[1px] border-green-100 hover:border-green-300 px-2 lg:px-5 py-3 pt-2 rounded-xl">
             <img src="../assets/images/featured/snack.png" width="93" height="84" alt="cat" class="mb-2 lg:mb-4" />
-            <h3 class="font-quickSand text-[12px] text-bold sm:text-heading-sm md:text-heading6 text-center">Snack</h3>
+            <h3 class="text-[12px] text-bold sm:text-heading-sm md:text-heading6 text-center">Snack</h3>
             <span class="text-xsmall text-gray-400 hidden lg:flex">34 items</span>
           </a>
-          <a href="#" class="flex flex-col justify-center items-center text-blue-300 bg-green-100 border-[1px] border-green-100 hover:border-green-300 px-2 lg:px-5 py-3 pt-2 rounded-xl">
+          <a href="#" class="flex flex-col justify-center items-center text-blue-300 bg-[#FFF3FF] border-[1px] border-green-100 hover:border-green-300 px-2 lg:px-5 py-3 pt-2 rounded-xl">
             <img src="../assets/images/featured/black-plum.png" width="93" height="84" alt="cat" class="mb-2 lg:mb-4" />
-            <h3 class="font-quickSand text-[12px] text-bold sm:text-heading-sm md:text-heading6 text-center">Black plum</h3>
+            <h3 class="text-[12px] text-bold sm:text-heading-sm md:text-heading6 text-center">Black plum</h3>
             <span class="text-xsmall text-gray-400 hidden lg:flex">25 items</span>
           </a>
-          <a href="#" class="flex flex-col justify-center items-center text-blue-300 bg-green-100 border-[1px] border-green-100 hover:border-green-300 px-2 lg:px-5 py-3 pt-2 rounded-xl">
+          <a href="#" class="flex flex-col justify-center items-center text-blue-300 bg-[#F2FCE4] border-[1px] border-green-100 hover:border-green-300 px-2 lg:px-5 py-3 pt-2 rounded-xl">
             <img src="../assets/images/featured/vegetables.png" width="93" height="84" alt="cat" class="mb-2 lg:mb-4" />
-            <h3 class="font-quickSand text-[12px] text-bold sm:text-heading-sm md:text-heading6 text-center">Vegetables</h3>
+            <h3 class="text-[12px] text-bold sm:text-heading-sm md:text-heading6 text-center">Vegetables</h3>
             <span class="text-xsmall text-gray-400 hidden lg:flex">65 items</span>
           </a>
-          <a href="#" class="flex flex-col justify-center items-center text-blue-300 bg-green-100 border-[1px] border-green-100 hover:border-green-300 px-2 lg:px-5 py-3 pt-2 rounded-xl">
+          <a href="#" class="flex flex-col justify-center items-center text-blue-300 bg-[#FFFCEB] border-[1px] border-green-100 hover:border-green-300 px-2 lg:px-5 py-3 pt-2 rounded-xl">
             <img src="../assets/images/featured/headphone.png" width="93" height="84" alt="cat" class="mb-2 lg:mb-4" />
-            <h3 class="font-quickSand text-[12px] text-bold sm:text-heading-sm md:text-heading6 text-center">Headphone</h3>
+            <h3 class="text-[12px] text-bold sm:text-heading-sm md:text-heading6 text-center">Headphone</h3>
             <span class="text-xsmall text-gray-400 hidden lg:flex">54 items</span>
           </a>
-          <a href="#" class="flex flex-col justify-center items-center text-blue-300 bg-green-100 border-[1px] border-green-100 hover:border-green-300 px-2 lg:px-5 py-3 pt-2 rounded-xl">
+          <a href="#" class="flex flex-col justify-center items-center text-blue-300 bg-[#F2FCE4] border-[1px] border-green-100 hover:border-green-300 px-2 lg:px-5 py-3 pt-2 rounded-xl">
             <img src="../assets/images/featured/snack.png" width="93" height="84" alt="cat" class="mb-2 lg:mb-4" />
-            <h3 class="font-quickSand text-[12px] text-bold sm:text-heading-sm md:text-heading6 text-center">Cake & Milk</h3>
+            <h3 class="text-[12px] text-bold sm:text-heading-sm md:text-heading6 text-center">Cake & Milk</h3>
             <span class="text-xsmall text-gray-400 hidden lg:flex">54 items</span>
           </a>
-          <a href="#" class="flex flex-col justify-center items-center text-blue-300 bg-green-100 border-[1px] border-green-100 hover:border-green-300 px-2 lg:px-5 py-3 pt-2 rounded-xl">
-            <img src="../assets/images/featured/organic-kiwi.png" width="93" height="84" alt="cat" class="mb-2 lg:mb-4" />
-            <h3 class="font-quickSand text-[12px] text-bold sm:text-heading-sm md:text-heading6 text-center">Orange</h3>
+          <a href="#" class="flex flex-col justify-center items-center text-blue-300 bg-[#FFF3FF] border-[1px] border-green-100 hover:border-green-300 px-2 lg:px-5 py-3 pt-2 rounded-xl">
+            <img src="../assets/images/featured/oranges.png" width="93" height="84" alt="cat" class="mb-2 lg:mb-4" />
+            <h3 class="text-[12px] text-bold sm:text-heading-sm md:text-heading6 text-center">Orange</h3>
             <span class="text-xsmall text-gray-400 hidden lg:flex">63 items</span>
           </a>
         </div>
@@ -243,31 +244,31 @@
             <div class="swiper-slide">
               <div class="flex items-center aspect-slider pl-4 lg:pl-12 bg-[#F0E8D5] rounded-[10px] bg-[length:50%] bg-[url('../../images/products/union.png')] bg-no-repeat bg-right-bottom">
                 <div class="basis-1/2 flex flex-col justify-between">
-                  <h3 class="font-quickSand text-heading6 xl:text-heading5 2xl:text-heading4 text-blue-300">Everyday Fresh & Clean with Our Products</h3>
+                  <h3 class="text-heading6 xl:text-heading5 2xl:text-heading4 text-blue-300">Everyday Fresh & Clean with Our Products</h3>
                   <a href="#" class="mt-6 pl-[15px] pr-2.5 py-2 bg-green-200 hover:bg-yellow-100 rounded-[3px] cursor-pointer inline-flex max-w-max items-center gap-2.5">
-                    <div class="font-quickSand text-xsmall text-white">Shop now</div>
+                    <div class="text-xsmall text-white">Shop now</div>
                     <i class="icon-arrow-small-right text-[24px]"></i>
                   </a>
                 </div>
               </div>
             </div>
             <div class="swiper-slide">
-              <div class="flex items-center aspect-slider pl-4 lg:pl-12 bg-[#F0E8D5] rounded-[10px] bg-[length:50%] bg-[url('../../images/products/drink.png')] bg-no-repeat bg-right-bottom">
+              <div class="flex items-center aspect-slider pl-4 lg:pl-12 bg-[#F3E8E8] rounded-[10px] bg-[length:50%] bg-[url('../../images/products/drink.png')] bg-no-repeat bg-right-bottom">
                 <div class="basis-1/2 flex flex-col justify-between">
-                  <h3 class="font-quickSand text-heading6 xl:text-heading5 2xl:text-heading4 text-blue-300">Make your Breakfast Healthy and Easy</h3>
+                  <h3 class="text-heading6 xl:text-heading5 2xl:text-heading4 text-blue-300">Make your Breakfast Healthy and Easy</h3>
                   <a href="#" class="mt-6 pl-[15px] pr-2.5 py-2 bg-green-200 hover:bg-yellow-100 rounded-[3px] cursor-pointer inline-flex max-w-max items-center gap-2.5">
-                    <div class="font-quickSand text-xsmall text-white">Shop now</div>
+                    <div class="text-xsmall text-white">Shop now</div>
                     <i class="icon-arrow-small-right text-[24px]"></i>
                   </a>
                 </div>
               </div>
             </div>
             <div class="swiper-slide">
-              <div class="flex items-center aspect-slider pl-4 lg:pl-12 bg-[#F0E8D5] rounded-[10px] bg-[length:50%] bg-[url('../../images/products/fruit.png')] bg-no-repeat bg-right-bottom">
+              <div class="flex items-center aspect-slider pl-4 lg:pl-12 bg-[#E7EAF3] rounded-[10px] bg-[length:50%] bg-[url('../../images/products/fruit.png')] bg-no-repeat bg-right-bottom">
                 <div class="basis-1/2 flex flex-col justify-between">
-                  <h3 class="font-quickSand text-heading6 xl:text-heading5 2xl:text-heading4 text-blue-300">The best Organic Products Online</h3>
+                  <h3 class="text-heading6 xl:text-heading5 2xl:text-heading4 text-blue-300">The best Organic Products Online</h3>
                   <a href="#" class="mt-6 pl-[15px] pr-2.5 py-2 bg-green-200 hover:bg-yellow-100 rounded-[3px] cursor-pointer inline-flex max-w-max items-center gap-2.5">
-                    <div class="font-quickSand text-xsmall text-white">Shop now</div>
+                    <div class="text-xsmall text-white">Shop now</div>
                     <i class="icon-arrow-small-right text-[24px]"></i>
                   </a>
                 </div>
@@ -282,8 +283,11 @@
       <!-- Popular Products Section Start -->
       <section class="container mb-[68px]">
         <div class="flex justify-between mb-[50px]">
-          <h2 class="font-quickSand text-heading3 text-blue-300">Popular Products</h2>
-          <div class="swiper-pagination"></div>
+          <h2 class="text-heading3 text-blue-300">Popular Products</h2>
+          <div class="flex items-center gap-3">
+            <i class="swiper-nav-left icon-angle-small-left cursor-pointer bg-gray-100 p-2 rounded-full text-gray-500 hover:bg-green-200 hover:text-white text-[24px]"></i>
+            <i class="swiper-nav-right icon-angle-small-right cursor-pointer bg-gray-100 p-2 rounded-full text-gray-500 hover:bg-green-200 hover:text-white text-[24px]"></i>
+          </div>
         </div>
         <div class="swiper products_slider">
           <div class="swiper-wrapper">
@@ -319,11 +323,11 @@
                 </div>
                 <div class="flex items-center justify-between mt-3">
                   <div>
-                    <span class="font-quickSand text-heading5 text-green-200">$2.51</span>
-                    <span class="font-quickSand text-heading-sm line-through text-gray-500">$2.80</span>
+                    <span class="text-heading5 text-green-200">$2.51</span>
+                    <span class="text-heading-sm line-through text-gray-500">$2.80</span>
                   </div>
                   <div class="add-product">
-                    <button class="flex items-center justify-center font-quickSand text-heading-sm text-green-200 border-[1px] rounded-[4px] bg-green-150 px-[10px] py-[5px]">Adds +</button>
+                    <button class="flex items-center justify-center text-heading-sm text-green-200 border-[1px] rounded-[4px] bg-green-150 px-[10px] py-[5px]">Adds +</button>
                     <div class="input-product__container hidden border-[1px] rounded-[4px] border-green-300 text-green-300 h-[30px] p-[3px]">
                       <input type="number" value="1" class="input-product h-[24px] w-[50px] border-0 focus:outline-none text-center" />
                       <div class="flex flex-col justify-between">
@@ -367,11 +371,11 @@
                 </div>
                 <div class="flex items-center justify-between mt-3">
                   <div>
-                    <span class="font-quickSand text-heading5 text-green-200">$2.51</span>
-                    <span class="font-quickSand text-heading-sm line-through text-gray-500">$2.80</span>
+                    <span class="text-heading5 text-green-200">$2.51</span>
+                    <span class="text-heading-sm line-through text-gray-500">$2.80</span>
                   </div>
                   <div class="add-product">
-                    <button class="flex items-center justify-center font-quickSand text-heading-sm text-green-200 border-[1px] rounded-[4px] bg-green-150 px-[10px] py-[5px]">Adds +</button>
+                    <button class="flex items-center justify-center text-heading-sm text-green-200 border-[1px] rounded-[4px] bg-green-150 px-[10px] py-[5px]">Adds +</button>
                     <div class="input-product__container hidden border-[1px] rounded-[4px] border-green-300 text-green-300 h-[30px] p-[3px]">
                       <input type="number" value="1" class="input-product h-[24px] w-[50px] border-0 focus:outline-none text-center" />
                       <div class="flex flex-col justify-between">
@@ -415,11 +419,11 @@
                 </div>
                 <div class="flex items-center justify-between mt-3">
                   <div>
-                    <span class="font-quickSand text-heading5 text-green-200">$2.51</span>
-                    <span class="font-quickSand text-heading-sm line-through text-gray-500">$2.80</span>
+                    <span class="text-heading5 text-green-200">$2.51</span>
+                    <span class="text-heading-sm line-through text-gray-500">$2.80</span>
                   </div>
                   <div class="add-product">
-                    <button class="flex items-center justify-center font-quickSand text-heading-sm text-green-200 border-[1px] rounded-[4px] bg-green-150 px-[10px] py-[5px]">Adds +</button>
+                    <button class="flex items-center justify-center text-heading-sm text-green-200 border-[1px] rounded-[4px] bg-green-150 px-[10px] py-[5px]">Adds +</button>
                     <div class="input-product__container hidden border-[1px] rounded-[4px] border-green-300 text-green-300 h-[30px] p-[3px]">
                       <input type="number" value="1" class="input-product h-[24px] w-[50px] border-0 focus:outline-none text-center" />
                       <div class="flex flex-col justify-between">
@@ -462,11 +466,11 @@
                 </div>
                 <div class="flex items-center justify-between mt-3">
                   <div>
-                    <span class="font-quickSand text-heading5 text-green-200">$2.51</span>
-                    <span class="font-quickSand text-heading-sm line-through text-gray-500">$2.80</span>
+                    <span class="text-heading5 text-green-200">$2.51</span>
+                    <span class="text-heading-sm line-through text-gray-500">$2.80</span>
                   </div>
                   <div class="add-product">
-                    <button class="flex items-center justify-center font-quickSand text-heading-sm text-green-200 border-[1px] rounded-[4px] bg-green-150 px-[10px] py-[5px]">Adds +</button>
+                    <button class="flex items-center justify-center text-heading-sm text-green-200 border-[1px] rounded-[4px] bg-green-150 px-[10px] py-[5px]">Adds +</button>
                     <div class="input-product__container hidden border-[1px] rounded-[4px] border-green-300 text-green-300 h-[30px] p-[3px]">
                       <input type="number" value="1" class="input-product h-[24px] w-[50px] border-0 focus:outline-none text-center" />
                       <div class="flex flex-col justify-between">
@@ -509,11 +513,11 @@
                 </div>
                 <div class="flex items-center justify-between mt-3">
                   <div>
-                    <span class="font-quickSand text-heading5 text-green-200">$2.51</span>
-                    <span class="font-quickSand text-heading-sm line-through text-gray-500">$2.80</span>
+                    <span class="text-heading5 text-green-200">$2.51</span>
+                    <span class="text-heading-sm line-through text-gray-500">$2.80</span>
                   </div>
                   <div class="add-product">
-                    <button class="flex items-center justify-center font-quickSand text-heading-sm text-green-200 border-[1px] rounded-[4px] bg-green-150 px-[10px] py-[5px]">Adds +</button>
+                    <button class="flex items-center justify-center text-heading-sm text-green-200 border-[1px] rounded-[4px] bg-green-150 px-[10px] py-[5px]">Adds +</button>
                     <div class="input-product__container hidden border-[1px] rounded-[4px] border-green-300 text-green-300 h-[30px] p-[3px]">
                       <input type="number" value="1" class="input-product h-[24px] w-[50px] border-0 focus:outline-none text-center" />
                       <div class="flex flex-col justify-between">
@@ -557,11 +561,313 @@
                 </div>
                 <div class="flex items-center justify-between mt-3">
                   <div>
-                    <span class="font-quickSand text-heading5 text-green-200">$2.51</span>
-                    <span class="font-quickSand text-heading-sm line-through text-gray-500">$2.80</span>
+                    <span class="text-heading5 text-green-200">$2.51</span>
+                    <span class="text-heading-sm line-through text-gray-500">$2.80</span>
                   </div>
                   <div class="add-product">
-                    <button class="flex items-center justify-center font-quickSand text-heading-sm text-green-200 border-[1px] rounded-[4px] bg-green-150 px-[10px] py-[5px]">Adds +</button>
+                    <button class="flex items-center justify-center text-heading-sm text-green-200 border-[1px] rounded-[4px] bg-green-150 px-[10px] py-[5px]">Adds +</button>
+                    <div class="input-product__container hidden border-[1px] rounded-[4px] border-green-300 text-green-300 h-[30px] p-[3px]">
+                      <input type="number" value="1" class="input-product h-[24px] w-[50px] border-0 focus:outline-none text-center" />
+                      <div class="flex flex-col justify-between">
+                        <i class="up icon-angle-small-up text-[10px]"></i>
+                        <i class="down icon-angle-small-down text-[10px]"></i>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- Popular Products Section End -->
+
+      <!-- Popular Products Section Start -->
+      <section class="container mb-[68px]">
+        <div class="flex justify-between mb-[50px]">
+          <h2 class="text-heading3 text-blue-300">Popular Fruits</h2>
+          <div class="flex items-center gap-3">
+            <i class="swiper-nav-left2 icon-angle-small-left cursor-pointer bg-gray-100 p-2 rounded-full text-gray-500 hover:bg-green-200 hover:text-white text-[24px]"></i>
+            <i class="swiper-nav-right2 icon-angle-small-right cursor-pointer bg-gray-100 p-2 rounded-full text-gray-500 hover:bg-green-200 hover:text-white text-[24px]"></i>
+          </div>
+        </div>
+        <div class="swiper products_slider2">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <div class="group border-[1px] border-gray-200 hover:border-green-150 rounded-[10px] hover:shadow-[20px_20px_40px_0_rgba(24,24,24,0.07)] relative p-3 md:p-4 xl:px-5 xl:pb-5 lg:pt-[65px] h-full">
+                <div class="badge badge--off absolute left-0 top-0 lg:top-5 rounded-tl-[10px] lg:rounded-tl-none">-17%</div>
+                <div class="mt-8 hidden group-hover:flex rounded-[5px] border-[1px] border-green-200 w-max absolute top-[100px] left-[50%] translate-x-[-50%] bg-white productAction cursor-pointer">
+                  <div class="p-2.5 border-r-[1px] border-r-green-200 hover:bg-green-150">
+                    <i class="icon-heart text-[15px] text-brand1"></i>
+                  </div>
+                  <div class="p-2.5 border-r-[1px] border-r-green-200 hover:bg-green-150">
+                    <i class="icon-shuffle text-[15px]"></i>
+                  </div>
+                  <div class="p-2.5 hover:bg-green-150">
+                    <i class="icon-eye text-[15px]"></i>
+                  </div>
+                </div>
+                <img src="../assets/images/products/mango.png" class="m-auto w-full aspect-[3/2] mb-[28px]" />
+                <div class="flex flex-col gap-2">
+                  <div class="text-gray-500 text-xsmall">Hodo Foods</div>
+                  <h3 class="text-heading-sm text-blue-300 max-h-[50px] overflow-hidden">Seeds of Change Organic Quinoa, Brown, & Red Rice</h3>
+                  <div class="flex gap-4">
+                    <ul class="flex gap-1">
+                      <li class="flex"><i class="icon-star-full text-[12px]"></i></li>
+                      <li class="flex"><i class="icon-star-full text-[12px]"></i></li>
+                      <li class="flex"><i class="icon-star-full text-[12px]"></i></li>
+                      <li class="flex"><i class="icon-star-full text-[12px]"></i></li>
+                      <li class="flex"><i class="icon-star-empty text-[12px]"></i></li>
+                    </ul>
+                    <div class="text-xsmall text-gray-500 font-lato">(4.0)</div>
+                  </div>
+                  <div class="font-lato text-xsmall text-gray-500">500 gram</div>
+                </div>
+                <div class="flex items-center justify-between mt-3">
+                  <div>
+                    <span class="text-heading5 text-green-200">$2.51</span>
+                    <span class="text-heading-sm line-through text-gray-500">$2.80</span>
+                  </div>
+                  <div class="add-product">
+                    <button class="flex items-center justify-center text-heading-sm text-green-200 border-[1px] rounded-[4px] bg-green-150 px-[10px] py-[5px]">Adds +</button>
+                    <div class="input-product__container hidden border-[1px] rounded-[4px] border-green-300 text-green-300 h-[30px] p-[3px]">
+                      <input type="number" value="1" class="input-product h-[24px] w-[50px] border-0 focus:outline-none text-center" />
+                      <div class="flex flex-col justify-between">
+                        <i class="up icon-angle-small-up text-[10px]"></i>
+                        <i class="down icon-angle-small-down text-[10px]"></i>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="group border-[1px] border-gray-200 hover:border-green-150 rounded-[10px] hover:shadow-[20px_20px_40px_0_rgba(24,24,24,0.07)] relative p-3 md:p-4 xl:px-5 xl:pb-5 lg:pt-[65px] h-full">
+                <div class="mt-8 hidden group-hover:flex rounded-[5px] border-[1px] border-green-200 w-max absolute top-[100px] left-[50%] translate-x-[-50%] bg-white productAction cursor-pointer">
+                  <div class="p-2.5 border-r-[1px] border-r-green-200 hover:bg-green-150">
+                    <i class="icon-heart text-[15px] text-brand1"></i>
+                  </div>
+                  <div class="p-2.5 border-r-[1px] border-r-green-200 hover:bg-green-150">
+                    <i class="icon-shuffle text-[15px]"></i>
+                  </div>
+                  <div class="p-2.5 hover:bg-green-150">
+                    <i class="icon-eye text-[15px]"></i>
+                  </div>
+                </div>
+                <img src="../assets/images/products/lemon.png" class="m-auto w-full aspect-[3/2] mb-[28px]" />
+                <div class="flex flex-col gap-2">
+                  <div class="text-gray-500 text-xsmall">Hodo Foods</div>
+                  <h3 class="text-heading-sm text-blue-300 max-h-[50px] overflow-hidden">Blue Diamond Almonds Lightly Salted Vegetables</h3>
+                  <div class="flex gap-4">
+                    <ul class="flex gap-1">
+                      <li class="flex"><i class="icon-star-full text-[12px]"></i></li>
+                      <li class="flex"><i class="icon-star-full text-[12px]"></i></li>
+                      <li class="flex"><i class="icon-star-full text-[12px]"></i></li>
+                      <li class="flex"><i class="icon-star-full text-[12px]"></i></li>
+                      <li class="flex"><i class="icon-star-empty text-[12px]"></i></li>
+                    </ul>
+                    <div class="text-xsmall text-gray-500 font-lato">(4.0)</div>
+                  </div>
+                  <div class="font-lato text-xsmall text-gray-500">500 gram</div>
+                </div>
+                <div class="flex items-center justify-between mt-3">
+                  <div>
+                    <span class="text-heading5 text-green-200">$2.51</span>
+                    <span class="text-heading-sm line-through text-gray-500">$2.80</span>
+                  </div>
+                  <div class="add-product">
+                    <button class="flex items-center justify-center text-heading-sm text-green-200 border-[1px] rounded-[4px] bg-green-150 px-[10px] py-[5px]">Adds +</button>
+                    <div class="input-product__container hidden border-[1px] rounded-[4px] border-green-300 text-green-300 h-[30px] p-[3px]">
+                      <input type="number" value="1" class="input-product h-[24px] w-[50px] border-0 focus:outline-none text-center" />
+                      <div class="flex flex-col justify-between">
+                        <i class="up icon-angle-small-up text-[10px]"></i>
+                        <i class="down icon-angle-small-down text-[10px]"></i>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="group border-[1px] border-gray-200 hover:border-green-150 rounded-[10px] hover:shadow-[20px_20px_40px_0_rgba(24,24,24,0.07)] relative p-3 md:p-4 xl:px-5 xl:pb-5 lg:pt-[65px] h-full">
+                <div class="badge badge--off absolute left-0 top-0 lg:top-5 rounded-tl-[10px] lg:rounded-tl-none">-17%</div>
+                <div class="mt-8 hidden group-hover:flex rounded-[5px] border-[1px] border-green-200 w-max absolute top-[100px] left-[50%] translate-x-[-50%] bg-white productAction cursor-pointer">
+                  <div class="p-2.5 border-r-[1px] border-r-green-200 hover:bg-green-150">
+                    <i class="icon-heart text-[15px] text-brand1"></i>
+                  </div>
+                  <div class="p-2.5 border-r-[1px] border-r-green-200 hover:bg-green-150">
+                    <i class="icon-shuffle text-[15px]"></i>
+                  </div>
+                  <div class="p-2.5 hover:bg-green-150">
+                    <i class="icon-eye text-[15px]"></i>
+                  </div>
+                </div>
+                <img src="../assets/images/products/cucumber.png" class="m-auto w-full aspect-[3/2] mb-[28px]" />
+                <div class="flex flex-col gap-2">
+                  <div class="text-gray-500 text-xsmall">Hodo Foods</div>
+                  <h3 class="text-heading-sm text-blue-300 max-h-[50px] overflow-hidden">Seeds of Change Organic Quinoa, Brown, & Red Rice</h3>
+                  <div class="flex gap-4">
+                    <ul class="flex gap-1">
+                      <li class="flex"><i class="icon-star-full text-[12px]"></i></li>
+                      <li class="flex"><i class="icon-star-full text-[12px]"></i></li>
+                      <li class="flex"><i class="icon-star-full text-[12px]"></i></li>
+                      <li class="flex"><i class="icon-star-full text-[12px]"></i></li>
+                      <li class="flex"><i class="icon-star-empty text-[12px]"></i></li>
+                    </ul>
+                    <div class="text-xsmall text-gray-500 font-lato">(4.0)</div>
+                  </div>
+                  <div class="font-lato text-xsmall text-gray-500">500 gram</div>
+                </div>
+                <div class="flex items-center justify-between mt-3">
+                  <div>
+                    <span class="text-heading5 text-green-200">$2.51</span>
+                    <span class="text-heading-sm line-through text-gray-500">$2.80</span>
+                  </div>
+                  <div class="add-product">
+                    <button class="flex items-center justify-center text-heading-sm text-green-200 border-[1px] rounded-[4px] bg-green-150 px-[10px] py-[5px]">Adds +</button>
+                    <div class="input-product__container hidden border-[1px] rounded-[4px] border-green-300 text-green-300 h-[30px] p-[3px]">
+                      <input type="number" value="1" class="input-product h-[24px] w-[50px] border-0 focus:outline-none text-center" />
+                      <div class="flex flex-col justify-between">
+                        <i class="up icon-angle-small-up text-[10px]"></i>
+                        <i class="down icon-angle-small-down text-[10px]"></i>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="group border-[1px] border-gray-200 hover:border-green-150 rounded-[10px] hover:shadow-[20px_20px_40px_0_rgba(24,24,24,0.07)] relative p-3 md:p-4 xl:px-5 xl:pb-5 lg:pt-[65px] h-full">
+                <div class="badge badge--hot absolute left-0 top-0 lg:top-5 rounded-tl-[10px] lg:rounded-tl-none">Hot</div>
+                <div class="mt-8 hidden group-hover:flex rounded-[5px] border-[1px] border-green-200 w-max absolute top-[100px] left-[50%] translate-x-[-50%] bg-white productAction cursor-pointer">
+                  <div class="p-2.5 border-r-[1px] border-r-green-200 hover:bg-green-150">
+                    <i class="icon-heart text-[15px] text-brand1"></i>
+                  </div>
+                  <div class="p-2.5 border-r-[1px] border-r-green-200 hover:bg-green-150">
+                    <i class="icon-shuffle text-[15px]"></i>
+                  </div>
+                  <div class="p-2.5 hover:bg-green-150">
+                    <i class="icon-eye text-[15px]"></i>
+                  </div>
+                </div>
+                <img src="../assets/images/products/corn.png" class="m-auto w-full aspect-[3/2] mb-[28px]" />
+                <div class="flex flex-col gap-2">
+                  <div class="text-gray-500 text-xsmall">Hodo Foods</div>
+                  <h3 class="text-heading-sm text-blue-300 max-h-[50px] overflow-hidden">All Natural Italian-Style Chicken Meatballs</h3>
+                  <div class="flex gap-4">
+                    <ul class="flex gap-1">
+                      <li class="flex"><i class="icon-star-full text-[12px]"></i></li>
+                      <li class="flex"><i class="icon-star-full text-[12px]"></i></li>
+                      <li class="flex"><i class="icon-star-full text-[12px]"></i></li>
+                      <li class="flex"><i class="icon-star-full text-[12px]"></i></li>
+                      <li class="flex"><i class="icon-star-empty text-[12px]"></i></li>
+                    </ul>
+                    <div class="text-xsmall text-gray-500 font-lato">(4.0)</div>
+                  </div>
+                  <div class="font-lato text-xsmall text-gray-500">500 gram</div>
+                </div>
+                <div class="flex items-center justify-between mt-3">
+                  <div>
+                    <span class="text-heading5 text-green-200">$2.51</span>
+                    <span class="text-heading-sm line-through text-gray-500">$2.80</span>
+                  </div>
+                  <div class="add-product">
+                    <button class="flex items-center justify-center text-heading-sm text-green-200 border-[1px] rounded-[4px] bg-green-150 px-[10px] py-[5px]">Adds +</button>
+                    <div class="input-product__container hidden border-[1px] rounded-[4px] border-green-300 text-green-300 h-[30px] p-[3px]">
+                      <input type="number" value="1" class="input-product h-[24px] w-[50px] border-0 focus:outline-none text-center" />
+                      <div class="flex flex-col justify-between">
+                        <i class="up icon-angle-small-up text-[10px]"></i>
+                        <i class="down icon-angle-small-down text-[10px]"></i>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="group border-[1px] border-gray-200 hover:border-green-150 rounded-[10px] hover:shadow-[20px_20px_40px_0_rgba(24,24,24,0.07)] relative p-3 md:p-4 xl:px-5 xl:pb-5 lg:pt-[65px] h-full">
+                <div class="mt-8 hidden group-hover:flex rounded-[5px] border-[1px] border-green-200 w-max absolute top-[100px] left-[50%] translate-x-[-50%] bg-white productAction cursor-pointer">
+                  <div class="p-2.5 border-r-[1px] border-r-green-200 hover:bg-green-150">
+                    <i class="icon-heart text-[15px] text-brand1"></i>
+                  </div>
+                  <div class="p-2.5 border-r-[1px] border-r-green-200 hover:bg-green-150">
+                    <i class="icon-shuffle text-[15px]"></i>
+                  </div>
+                  <div class="p-2.5 hover:bg-green-150">
+                    <i class="icon-eye text-[15px]"></i>
+                  </div>
+                </div>
+                <img src="../assets/images/products/paper.png" class="m-auto w-full aspect-[3/2] mb-[28px]" />
+                <div class="flex flex-col gap-2">
+                  <div class="text-gray-500 text-xsmall">Hodo Foods</div>
+                  <h3 class="text-heading-sm text-blue-300 max-h-[50px] overflow-hidden">Foster Farms Takeout Crispy Classic Buffalo Wings</h3>
+                  <div class="flex gap-4">
+                    <ul class="flex gap-1">
+                      <li class="flex"><i class="icon-star-full text-[12px]"></i></li>
+                      <li class="flex"><i class="icon-star-full text-[12px]"></i></li>
+                      <li class="flex"><i class="icon-star-full text-[12px]"></i></li>
+                      <li class="flex"><i class="icon-star-full text-[12px]"></i></li>
+                      <li class="flex"><i class="icon-star-empty text-[12px]"></i></li>
+                    </ul>
+                    <div class="text-xsmall text-gray-500 font-lato">(4.0)</div>
+                  </div>
+                  <div class="font-lato text-xsmall text-gray-500">500 gram</div>
+                </div>
+                <div class="flex items-center justify-between mt-3">
+                  <div>
+                    <span class="text-heading5 text-green-200">$2.51</span>
+                    <span class="text-heading-sm line-through text-gray-500">$2.80</span>
+                  </div>
+                  <div class="add-product">
+                    <button class="flex items-center justify-center text-heading-sm text-green-200 border-[1px] rounded-[4px] bg-green-150 px-[10px] py-[5px]">Adds +</button>
+                    <div class="input-product__container hidden border-[1px] rounded-[4px] border-green-300 text-green-300 h-[30px] p-[3px]">
+                      <input type="number" value="1" class="input-product h-[24px] w-[50px] border-0 focus:outline-none text-center" />
+                      <div class="flex flex-col justify-between">
+                        <i class="up icon-angle-small-up text-[10px]"></i>
+                        <i class="down icon-angle-small-down text-[10px]"></i>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="group border-[1px] border-gray-200 hover:border-green-150 rounded-[10px] hover:shadow-[20px_20px_40px_0_rgba(24,24,24,0.07)] relative p-3 md:p-4 xl:px-5 xl:pb-5 lg:pt-[65px] h-full">
+                <div class="badge badge--sale absolute left-0 top-0 lg:top-5 rounded-tl-[10px] lg:rounded-tl-none">Sale</div>
+                <div class="mt-8 hidden group-hover:flex rounded-[5px] border-[1px] border-green-200 w-max absolute top-[100px] left-[50%] translate-x-[-50%] bg-white productAction cursor-pointer">
+                  <div class="p-2.5 border-r-[1px] border-r-green-200 hover:bg-green-150">
+                    <i class="icon-heart text-[15px] text-brand1"></i>
+                  </div>
+                  <div class="p-2.5 border-r-[1px] border-r-green-200 hover:bg-green-150">
+                    <i class="icon-shuffle text-[15px]"></i>
+                  </div>
+                  <div class="p-2.5 hover:bg-green-150">
+                    <i class="icon-eye text-[15px]"></i>
+                  </div>
+                </div>
+                <img src="../assets/images/products/tanjerin.png" class="m-auto w-full aspect-[3/2] mb-[28px] /" />
+                <div class="flex flex-col gap-2">
+                  <div class="text-gray-500 text-xsmall">Hodo Foods</div>
+                  <h3 class="text-heading-sm text-blue-300 max-h-[50px] overflow-hidden">Angie’s Boomchickapop Sweet & Salty Kettle Corn</h3>
+                  <div class="flex gap-4">
+                    <ul class="flex gap-1">
+                      <li class="flex"><i class="icon-star-full text-[12px]"></i></li>
+                      <li class="flex"><i class="icon-star-full text-[12px]"></i></li>
+                      <li class="flex"><i class="icon-star-full text-[12px]"></i></li>
+                      <li class="flex"><i class="icon-star-full text-[12px]"></i></li>
+                      <li class="flex"><i class="icon-star-empty text-[12px]"></i></li>
+                    </ul>
+                    <div class="text-xsmall text-gray-500 font-lato">(4.0)</div>
+                  </div>
+                  <div class="font-lato text-xsmall text-gray-500">500 gram</div>
+                </div>
+                <div class="flex items-center justify-between mt-3">
+                  <div>
+                    <span class="text-heading5 text-green-200">$2.51</span>
+                    <span class="text-heading-sm line-through text-gray-500">$2.80</span>
+                  </div>
+                  <div class="add-product">
+                    <button class="flex items-center justify-center text-heading-sm text-green-200 border-[1px] rounded-[4px] bg-green-150 px-[10px] py-[5px]">Adds +</button>
                     <div class="input-product__container hidden border-[1px] rounded-[4px] border-green-300 text-green-300 h-[30px] p-[3px]">
                       <input type="number" value="1" class="input-product h-[24px] w-[50px] border-0 focus:outline-none text-center" />
                       <div class="flex flex-col justify-between">
@@ -579,15 +885,15 @@
       <!-- Popular Products Section End -->
 
       <!-- Best Sellers Start -->
-      <section class="container mb-[66px]">
+      <section class="container mb-[68px]">
         <div class="flex justify-between mb-[50px]">
-          <h2 class="font-quickSand text-heading6 md:text-heading5 lg:text-heading4 xl:text-heading3 text-blue-300">Best Sellers</h2>
+          <h2 class="text-heading6 md:text-heading5 lg:text-heading4 xl:text-heading3 text-blue-300">Best Sellers</h2>
         </div>
         <div class="flex gap-[24px]">
           <div class="bg-[url('../../images/bg-leaf.png')] bg-no-repeat bg-bottom bg-[#3BB77E] rounded-[10px] shadow-[20px_20px_40px_0_rgba(24,24,24,0.07)] p-12 pt-[38px] self-stretch flex-col justify-between max-w-[370px] hidden xl:flex">
-            <h3 class="font-quickSand text-heading2 text-blue-300">Bring nature into your home</h3>
+            <h3 class="text-heading2 text-blue-300">Bring nature into your home</h3>
             <a href="#" class="mt-6 pl-[15px] pr-2.5 py-2 bg-yellow-100 hover:bg-green-200 rounded-[3px] cursor-pointer inline-flex max-w-max items-center gap-2.5">
-              <div class="font-quickSand text-xsmall text-white">Shop now</div>
+              <div class="text-xsmall text-white">Shop now</div>
               <i class="icon-arrow-small-right text-[24px]"></i>
             </a>
           </div>
@@ -598,7 +904,6 @@
                   <div class="badge badge--off absolute left-0 top-0 lg:top-5 rounded-tl-[10px] lg:rounded-tl-none">-17%</div>
                   <div class="mt-8 flex rounded-[5px] border-[1px] border-green-200 w-max absolute top-[100px] left-[50%] translate-x-[-50%] bg-white hidden productAction cursor-pointer">
                     <div class="p-2.5 border-r-[1px] border-r-green-200 hover:bg-green-150">
-                      <img src="../assets/icons/fi-rs-heart%201.svg" width="15" height="15" />
                       <i class="icon-heart text-[15px] text-brand1"></i>
                     </div>
                     <div class="p-2.5 border-r-[1px] border-r-green-200 hover:bg-green-150">
@@ -628,8 +933,8 @@
                   </div>
                   <div class="flex items-center justify-between mt-3">
                     <div>
-                      <span class="font-quickSand text-heading5 text-green-200">$2.51</span>
-                      <span class="font-quickSand text-heading-sm line-through text-gray-500">$2.80</span>
+                      <span class="text-heading5 text-green-200">$2.51</span>
+                      <span class="text-heading-sm line-through text-gray-500">$2.80</span>
                     </div>
                   </div>
                   <div class="mt-[15px] bg-gray-200 h-[4px] w-full rounded-[2px]">
@@ -637,9 +942,9 @@
                   </div>
                   <div class="mt-2.5 font-lato text-blue-300 text-xsmall">Sold: 90/120</div>
                   <div class="mt-[23px]">
-                    <button class="flex justify-center items-center gap-2 font-quickSand xl:text-heading-sm text-white border-[1px] w-full rounded-[4px] bg-green-200 hover:bg-yellow-100 px-2 py-2 lg:py-[14px]">
+                    <button class="flex justify-center items-center gap-2 xl:text-heading-sm text-white border-[1px] w-full rounded-[4px] bg-green-200 hover:bg-yellow-100 px-2 py-2 lg:py-[14px]">
                       <i class="icon-shopping-cart text-[22px]"></i>
-                      <span class="font-quicksand text-heading-sm">Add To Card</span>
+                      <span class="text-heading-sm">Add To Card</span>
                     </button>
                   </div>
                 </div>
@@ -678,8 +983,8 @@
                   </div>
                   <div class="flex items-center justify-between mt-3">
                     <div>
-                      <span class="font-quickSand text-heading5 text-green-200">$2.51</span>
-                      <span class="font-quickSand text-heading-sm line-through text-gray-500">$2.80</span>
+                      <span class="text-heading5 text-green-200">$2.51</span>
+                      <span class="text-heading-sm line-through text-gray-500">$2.80</span>
                     </div>
                   </div>
                   <div class="mt-[15px] bg-gray-200 h-[4px] w-full rounded-[2px]">
@@ -687,9 +992,9 @@
                   </div>
                   <div class="mt-2.5 font-lato text-blue-300 text-xsmall">Sold: 90/120</div>
                   <div class="mt-[23px]">
-                    <button class="flex justify-center items-center gap-2 font-quickSand xl:text-heading-sm text-white border-[1px] w-full rounded-[4px] bg-green-200 hover:bg-yellow-100 px-2 py-2 lg:py-[14px]">
+                    <button class="flex justify-center items-center gap-2 xl:text-heading-sm text-white border-[1px] w-full rounded-[4px] bg-green-200 hover:bg-yellow-100 px-2 py-2 lg:py-[14px]">
                       <i class="icon-shopping-cart text-[22px]"></i>
-                      <span class="font-quicksand text-heading-sm">Add To Card</span>
+                      <span class="text-heading-sm">Add To Card</span>
                     </button>
                   </div>
                 </div>
@@ -728,8 +1033,8 @@
                   </div>
                   <div class="flex items-center justify-between mt-3">
                     <div>
-                      <span class="font-quickSand text-heading5 text-green-200">$2.51</span>
-                      <span class="font-quickSand text-heading-sm line-through text-gray-500">$2.80</span>
+                      <span class="text-heading5 text-green-200">$2.51</span>
+                      <span class="text-heading-sm line-through text-gray-500">$2.80</span>
                     </div>
                   </div>
                   <div class="mt-[15px] bg-gray-200 h-[4px] w-full rounded-[2px]">
@@ -737,9 +1042,9 @@
                   </div>
                   <div class="mt-2.5 font-lato text-blue-300 text-xsmall">Sold: 90/120</div>
                   <div class="mt-[23px]">
-                    <button class="flex justify-center items-center gap-2 font-quickSand xl:text-heading-sm text-white border-[1px] w-full rounded-[4px] bg-green-200 hover:bg-yellow-100 px-2 py-2 lg:py-[14px]">
+                    <button class="flex justify-center items-center gap-2 xl:text-heading-sm text-white border-[1px] w-full rounded-[4px] bg-green-200 hover:bg-yellow-100 px-2 py-2 lg:py-[14px]">
                       <i class="icon-shopping-cart text-[22px]"></i>
-                      <span class="font-quicksand text-heading-sm">Add To Card</span>
+                      <span class="text-heading-sm">Add To Card</span>
                     </button>
                   </div>
                 </div>
@@ -778,8 +1083,8 @@
                   </div>
                   <div class="flex items-center justify-between mt-3">
                     <div>
-                      <span class="font-quickSand text-heading5 text-green-200">$2.51</span>
-                      <span class="font-quickSand text-heading-sm line-through text-gray-500">$2.80</span>
+                      <span class="text-heading5 text-green-200">$2.51</span>
+                      <span class="text-heading-sm line-through text-gray-500">$2.80</span>
                     </div>
                   </div>
                   <div class="mt-[15px] bg-gray-200 h-[4px] w-full rounded-[2px]">
@@ -787,9 +1092,9 @@
                   </div>
                   <div class="mt-2.5 font-lato text-blue-300 text-xsmall">Sold: 90/120</div>
                   <div class="mt-[23px]">
-                    <button class="flex justify-center items-center gap-2 font-quickSand xl:text-heading-sm text-white border-[1px] w-full rounded-[4px] bg-green-200 hover:bg-yellow-100 px-2 py-2 lg:py-[14px]">
+                    <button class="flex justify-center items-center gap-2 xl:text-heading-sm text-white border-[1px] w-full rounded-[4px] bg-green-200 hover:bg-yellow-100 px-2 py-2 lg:py-[14px]">
                       <i class="icon-shopping-cart text-[22px]"></i>
-                      <span class="font-quicksand text-heading-sm">Add To Card</span>
+                      <span class="text-heading-sm">Add To Card</span>
                     </button>
                   </div>
                 </div>
@@ -828,8 +1133,8 @@
                   </div>
                   <div class="flex items-center justify-between mt-3">
                     <div>
-                      <span class="font-quickSand text-heading5 text-green-200">$2.51</span>
-                      <span class="font-quickSand text-heading-sm line-through text-gray-500">$2.80</span>
+                      <span class="text-heading5 text-green-200">$2.51</span>
+                      <span class="text-heading-sm line-through text-gray-500">$2.80</span>
                     </div>
                   </div>
                   <div class="mt-[15px] bg-gray-200 h-[4px] w-full rounded-[2px]">
@@ -837,9 +1142,9 @@
                   </div>
                   <div class="mt-2.5 font-lato text-blue-300 text-xsmall">Sold: 90/120</div>
                   <div class="mt-[23px]">
-                    <button class="flex justify-center items-center gap-2 font-quickSand xl:text-heading-sm text-white border-[1px] w-full rounded-[4px] bg-green-200 hover:bg-yellow-100 px-2 py-2 lg:py-[14px]">
+                    <button class="flex justify-center items-center gap-2 xl:text-heading-sm text-white border-[1px] w-full rounded-[4px] bg-green-200 hover:bg-yellow-100 px-2 py-2 lg:py-[14px]">
                       <i class="icon-shopping-cart text-[22px]"></i>
-                      <span class="font-quicksand text-heading-sm">Add To Card</span>
+                      <span class="text-heading-sm">Add To Card</span>
                     </button>
                   </div>
                 </div>
@@ -878,8 +1183,8 @@
                   </div>
                   <div class="flex items-center justify-between mt-3">
                     <div>
-                      <span class="font-quickSand text-heading5 text-green-200">$2.51</span>
-                      <span class="font-quickSand text-heading-sm line-through text-gray-500">$2.80</span>
+                      <span class="text-heading5 text-green-200">$2.51</span>
+                      <span class="text-heading-sm line-through text-gray-500">$2.80</span>
                     </div>
                   </div>
                   <div class="mt-[15px] bg-gray-200 h-[4px] w-full rounded-[2px]">
@@ -887,9 +1192,9 @@
                   </div>
                   <div class="mt-2.5 font-lato text-blue-300 text-xsmall">Sold: 90/120</div>
                   <div class="mt-[23px]">
-                    <button class="flex justify-center items-center gap-2 font-quickSand xl:text-heading-sm text-white border-[1px] w-full rounded-[4px] bg-green-200 hover:bg-yellow-100 px-2 py-2 lg:py-[14px]">
+                    <button class="flex justify-center items-center gap-2 xl:text-heading-sm text-white border-[1px] w-full rounded-[4px] bg-green-200 hover:bg-yellow-100 px-2 py-2 lg:py-[14px]">
                       <i class="icon-shopping-cart text-[22px]"></i>
-                      <span class="font-quicksand text-heading-sm">Add To Card</span>
+                      <span class="text-heading-sm">Add To Card</span>
                     </button>
                   </div>
                 </div>
@@ -902,12 +1207,10 @@
       <!-- Best Sellers End -->
 
       <!-- Deals Of The Days Start -->
-      <section class="container mb-[66px]">
-        <div class="flex justify-between">
-          <h2 class="font-quickSand text-heading6 md:text-heading5 lg:text-heading4 xl:text-heading3 text-blue-300">Deals Of The Days</h2>
-          <ul class="flex items-center gap-[30px] font-lato text-medium">
-            <li class="cursor-pointer">All Deals ></li>
-          </ul>
+      <section class="container mb-[68px]">
+        <div class="flex justify-between items-center">
+          <h2 class="text-heading6 md:text-heading5 lg:text-heading4 xl:text-heading3 text-blue-300">Deals Of The Days</h2>
+          <a class="flex items-center" href="#">All Deals <i class="icon-angle-small-right text-[24px]"></i></a>
         </div>
         <div class="swiper deals-slider mt-[47px]">
           <div class="swiper-wrapper">
@@ -915,26 +1218,26 @@
               <div class="relative h-[438px]">
                 <img src="../assets/images/deals/lettuce.png" class="w-full" />
                 <div class="absolute z-[20] left-[50%] translate-x-[-50%] top-[195px]">
-                  <div class="flex items-center gap-3 h-[60px]">
+                  <div class="timer1 flex items-center gap-3 h-[60px]">
                     <div class="bg-white rounded-[6px] h-full aspect-square text-center">
-                      <div class="font-quickSand text-green-200 font-bold text-[28px] leading-[38px]">05</div>
+                      <div class="day text-green-200 font-bold text-[28px] leading-[38px]">05</div>
                       <div class="font-lato text-gray-500 text-small">Days</div>
                     </div>
                     <div class="bg-white rounded-[6px] h-full aspect-square text-center">
-                      <div class="font-quickSand text-green-200 font-bold text-[28px] leading-[38px]">06</div>
+                      <div class="hour text-green-200 font-bold text-[28px] leading-[38px]">06</div>
                       <div class="font-lato text-gray-500 text-small">Hours</div>
                     </div>
                     <div class="bg-white rounded-[6px] h-full aspect-square text-center">
-                      <div class="font-quickSand text-green-200 font-bold text-[28px] leading-[38px]">56</div>
+                      <div class="minute text-green-200 font-bold text-[28px] leading-[38px]">56</div>
                       <div class="font-lato text-gray-500 text-small">Mins</div>
                     </div>
                     <div class="bg-white rounded-[6px] h-full aspect-square text-center">
-                      <div class="font-quickSand text-green-200 font-bold text-[28px] leading-[38px]">18</div>
+                      <div class="second text-green-200 font-bold text-[28px] leading-[38px]">18</div>
                       <div class="font-lato text-gray-500 text-small">Secs</div>
                     </div>
                   </div>
                   <div class="bg-white mt-2.5 px-8 pt-6 pb-4 rounded-[10px] shadow-c-xs">
-                    <div class="font-quickSand text-heading-sm text-blue-300">Seeds of Change Organic Quinoa, Brown, & Red Rice</div>
+                    <div class="text-heading-sm text-blue-300">Seeds of Change Organic Quinoa, Brown, & Red Rice</div>
                     <div class="flex w-[106px] justify-between h-4 items-center mt-1">
                       <div class="flex gap-4">
                         <ul class="flex gap-1">
@@ -950,11 +1253,11 @@
                     <div class="font-lato text-xsmall text-gray-500 mt-1">500 gram</div>
                     <div class="flex items-center justify-between mt-3">
                       <div>
-                        <span class="font-quickSand text-heading5 text-green-200">$2.51</span>
-                        <span class="font-quickSand text-heading-sm line-through text-gray-500">$2.80</span>
+                        <span class="text-heading5 text-green-200">$2.51</span>
+                        <span class="text-heading-sm line-through text-gray-500">$2.80</span>
                       </div>
                       <div class="add-product">
-                        <button class="flex items-center justify-center font-quickSand text-heading-sm text-green-200 border-[1px] rounded-[4px] bg-green-150 px-[10px] py-[5px]">Adds +</button>
+                        <button class="flex items-center justify-center text-heading-sm text-green-200 border-[1px] rounded-[4px] bg-green-150 px-[10px] py-[5px]">Adds +</button>
                         <div class="input-product__container hidden border-[1px] rounded-[4px] border-green-300 text-green-300 h-[30px] p-[3px]">
                           <input type="number" value="1" class="input-product h-[24px] w-[50px] border-0 focus:outline-none text-center" />
                           <div class="flex flex-col justify-between">
@@ -974,24 +1277,24 @@
                 <div class="absolute z-[20] left-[50%] translate-x-[-50%] top-[195px]">
                   <div class="flex items-center gap-3 h-[60px]">
                     <div class="bg-white rounded-[6px] h-full aspect-square text-center">
-                      <div class="font-quickSand text-green-200 font-bold text-[28px] leading-[38px]">05</div>
+                      <div class="text-green-200 font-bold text-[28px] leading-[38px]">05</div>
                       <div class="font-lato text-gray-500 text-small">Days</div>
                     </div>
                     <div class="bg-white rounded-[6px] h-full aspect-square text-center">
-                      <div class="font-quickSand text-green-200 font-bold text-[28px] leading-[38px]">06</div>
+                      <div class="text-green-200 font-bold text-[28px] leading-[38px]">06</div>
                       <div class="font-lato text-gray-500 text-small">Hours</div>
                     </div>
                     <div class="bg-white rounded-[6px] h-full aspect-square text-center">
-                      <div class="font-quickSand text-green-200 font-bold text-[28px] leading-[38px]">56</div>
+                      <div class="text-green-200 font-bold text-[28px] leading-[38px]">56</div>
                       <div class="font-lato text-gray-500 text-small">Mins</div>
                     </div>
                     <div class="bg-white rounded-[6px] h-full aspect-square text-center">
-                      <div class="font-quickSand text-green-200 font-bold text-[28px] leading-[38px]">18</div>
+                      <div class="text-green-200 font-bold text-[28px] leading-[38px]">18</div>
                       <div class="font-lato text-gray-500 text-small">Secs</div>
                     </div>
                   </div>
                   <div class="bg-white mt-2.5 px-8 pt-6 pb-4 rounded-[10px] shadow-c-xs">
-                    <div class="font-quickSand text-heading-sm text-blue-300">Seeds of Change Organic Quinoa, Brown, & Red Rice</div>
+                    <div class="text-heading-sm text-blue-300">Seeds of Change Organic Quinoa, Brown, & Red Rice</div>
                     <div class="flex w-[106px] justify-between h-4 items-center mt-1">
                       <div class="flex gap-4">
                         <ul class="flex gap-1">
@@ -1007,11 +1310,11 @@
                     <div class="font-lato text-xsmall text-gray-500 mt-1">500 gram</div>
                     <div class="flex items-center justify-between mt-3">
                       <div>
-                        <span class="font-quickSand text-heading5 text-green-200">$2.51</span>
-                        <span class="font-quickSand text-heading-sm line-through text-gray-500">$2.80</span>
+                        <span class="text-heading5 text-green-200">$2.51</span>
+                        <span class="text-heading-sm line-through text-gray-500">$2.80</span>
                       </div>
                       <div class="add-product">
-                        <button class="flex items-center justify-center font-quickSand text-heading-sm text-green-200 border-[1px] rounded-[4px] bg-green-150 px-[10px] py-[5px]">Adds +</button>
+                        <button class="flex items-center justify-center text-heading-sm text-green-200 border-[1px] rounded-[4px] bg-green-150 px-[10px] py-[5px]">Adds +</button>
                         <div class="input-product__container hidden border-[1px] rounded-[4px] border-green-300 text-green-300 h-[30px] p-[3px]">
                           <input type="number" value="1" class="input-product h-[24px] w-[50px] border-0 focus:outline-none text-center" />
                           <div class="flex flex-col justify-between">
@@ -1031,24 +1334,24 @@
                 <div class="absolute z-[20] left-[50%] translate-x-[-50%] top-[195px]">
                   <div class="flex items-center gap-3 h-[60px]">
                     <div class="bg-white rounded-[6px] h-full aspect-square text-center">
-                      <div class="font-quickSand text-green-200 font-bold text-[28px] leading-[38px]">05</div>
+                      <div class="text-green-200 font-bold text-[28px] leading-[38px]">05</div>
                       <div class="font-lato text-gray-500 text-small">Days</div>
                     </div>
                     <div class="bg-white rounded-[6px] h-full aspect-square text-center">
-                      <div class="font-quickSand text-green-200 font-bold text-[28px] leading-[38px]">06</div>
+                      <div class="text-green-200 font-bold text-[28px] leading-[38px]">06</div>
                       <div class="font-lato text-gray-500 text-small">Hours</div>
                     </div>
                     <div class="bg-white rounded-[6px] h-full aspect-square text-center">
-                      <div class="font-quickSand text-green-200 font-bold text-[28px] leading-[38px]">56</div>
+                      <div class="text-green-200 font-bold text-[28px] leading-[38px]">56</div>
                       <div class="font-lato text-gray-500 text-small">Mins</div>
                     </div>
                     <div class="bg-white rounded-[6px] h-full aspect-square text-center">
-                      <div class="font-quickSand text-green-200 font-bold text-[28px] leading-[38px]">18</div>
+                      <div class="text-green-200 font-bold text-[28px] leading-[38px]">18</div>
                       <div class="font-lato text-gray-500 text-small">Secs</div>
                     </div>
                   </div>
                   <div class="bg-white mt-2.5 px-8 pt-6 pb-4 rounded-[10px] shadow-c-xs">
-                    <div class="font-quickSand text-heading-sm text-blue-300">Seeds of Change Organic Quinoa, Brown, & Red Rice</div>
+                    <div class="text-heading-sm text-blue-300">Seeds of Change Organic Quinoa, Brown, & Red Rice</div>
                     <div class="flex w-[106px] justify-between h-4 items-center mt-1">
                       <div class="flex gap-4">
                         <ul class="flex gap-1">
@@ -1064,11 +1367,11 @@
                     <div class="font-lato text-xsmall text-gray-500 mt-1">500 gram</div>
                     <div class="flex items-center justify-between mt-3">
                       <div>
-                        <span class="font-quickSand text-heading5 text-green-200">$2.51</span>
-                        <span class="font-quickSand text-heading-sm line-through text-gray-500">$2.80</span>
+                        <span class="text-heading5 text-green-200">$2.51</span>
+                        <span class="text-heading-sm line-through text-gray-500">$2.80</span>
                       </div>
                       <div class="add-product">
-                        <button class="flex items-center justify-center font-quickSand text-heading-sm text-green-200 border-[1px] rounded-[4px] bg-green-150 px-[10px] py-[5px]">Adds +</button>
+                        <button class="flex items-center justify-center text-heading-sm text-green-200 border-[1px] rounded-[4px] bg-green-150 px-[10px] py-[5px]">Adds +</button>
                         <div class="input-product__container hidden border-[1px] rounded-[4px] border-green-300 text-green-300 h-[30px] p-[3px]">
                           <input type="number" value="1" class="input-product h-[24px] w-[50px] border-0 focus:outline-none text-center" />
                           <div class="flex flex-col justify-between">
@@ -1088,24 +1391,24 @@
                 <div class="absolute z-[20] left-[50%] translate-x-[-50%] top-[195px]">
                   <div class="flex items-center gap-3 h-[60px]">
                     <div class="bg-white rounded-[6px] h-full aspect-square text-center">
-                      <div class="font-quickSand text-green-200 font-bold text-[28px] leading-[38px]">05</div>
+                      <div class="text-green-200 font-bold text-[28px] leading-[38px]">05</div>
                       <div class="font-lato text-gray-500 text-small">Days</div>
                     </div>
                     <div class="bg-white rounded-[6px] h-full aspect-square text-center">
-                      <div class="font-quickSand text-green-200 font-bold text-[28px] leading-[38px]">06</div>
+                      <div class="text-green-200 font-bold text-[28px] leading-[38px]">06</div>
                       <div class="font-lato text-gray-500 text-small">Hours</div>
                     </div>
                     <div class="bg-white rounded-[6px] h-full aspect-square text-center">
-                      <div class="font-quickSand text-green-200 font-bold text-[28px] leading-[38px]">56</div>
+                      <div class="text-green-200 font-bold text-[28px] leading-[38px]">56</div>
                       <div class="font-lato text-gray-500 text-small">Mins</div>
                     </div>
                     <div class="bg-white rounded-[6px] h-full aspect-square text-center">
-                      <div class="font-quickSand text-green-200 font-bold text-[28px] leading-[38px]">18</div>
+                      <div class="text-green-200 font-bold text-[28px] leading-[38px]">18</div>
                       <div class="font-lato text-gray-500 text-small">Secs</div>
                     </div>
                   </div>
                   <div class="bg-white mt-2.5 px-8 pt-6 pb-4 rounded-[10px] shadow-c-xs">
-                    <div class="font-quickSand text-heading-sm text-blue-300">Seeds of Change Organic Quinoa, Brown, & Red Rice</div>
+                    <div class="text-heading-sm text-blue-300">Seeds of Change Organic Quinoa, Brown, & Red Rice</div>
                     <div class="flex w-[106px] justify-between h-4 items-center mt-1">
                       <div class="flex gap-4">
                         <ul class="flex gap-1">
@@ -1121,11 +1424,11 @@
                     <div class="font-lato text-xsmall text-gray-500 mt-1">500 gram</div>
                     <div class="flex items-center justify-between mt-3">
                       <div>
-                        <span class="font-quickSand text-heading5 text-green-200">$2.51</span>
-                        <span class="font-quickSand text-heading-sm line-through text-gray-500">$2.80</span>
+                        <span class="text-heading5 text-green-200">$2.51</span>
+                        <span class="text-heading-sm line-through text-gray-500">$2.80</span>
                       </div>
                       <div class="add-product">
-                        <button class="flex items-center justify-center font-quickSand text-heading-sm text-green-200 border-[1px] rounded-[4px] bg-green-150 px-[10px] py-[5px]">Adds +</button>
+                        <button class="flex items-center justify-center text-heading-sm text-green-200 border-[1px] rounded-[4px] bg-green-150 px-[10px] py-[5px]">Adds +</button>
                         <div class="input-product__container hidden border-[1px] rounded-[4px] border-green-300 text-green-300 h-[30px] p-[3px]">
                           <input type="number" value="1" class="input-product h-[24px] w-[50px] border-0 focus:outline-none text-center" />
                           <div class="flex flex-col justify-between">
@@ -1150,13 +1453,13 @@
         <div class="swiper top-sliders">
           <div class="swiper-wrapper">
             <div class="swiper-slide">
-              <h3 class="font-quickSand text-heading6 md:text-heading5 lg:text-heading4 xl:text-heading3 text-blue-300 mb-[30px]">Top Selling</h3>
+              <h3 class="text-heading6 md:text-heading5 lg:text-heading4 xl:text-heading3 text-blue-300 mb-[30px]">Top Selling</h3>
               <div class="flex flex-col gap-6">
                 <div class="flex gap-3 lg:gap-5">
                   <img src="../assets/images/products/avocado.png" width="120" height="120" />
                   <div class="flex flex-col justify-between">
                     <div>
-                      <div class="font-quickSand text-heading6 text-blue-300 mb-1">Nestle Original Coffee-Mate Coffee Creamer</div>
+                      <div class="text-heading6 text-blue-300 mb-1">Nestle Original Coffee-Mate Coffee Creamer</div>
                       <div class="flex gap-4">
                         <ul class="flex gap-1">
                           <li class="flex"><i class="icon-star-full text-[12px]"></i></li>
@@ -1169,8 +1472,8 @@
                       </div>
                     </div>
                     <div>
-                      <span class="font-quickSand text-heading5 text-green-200">$2.51</span>
-                      <span class="font-quickSand text-heading-sm line-through text-gray-500">$2.80</span>
+                      <span class="text-heading5 text-green-200">$2.51</span>
+                      <span class="text-heading-sm line-through text-gray-500">$2.80</span>
                     </div>
                   </div>
                 </div>
@@ -1178,7 +1481,7 @@
                   <img src="../assets/images/products/banana.png" width="120" height="120" />
                   <div class="flex flex-col justify-between">
                     <div>
-                      <div class="font-quickSand text-heading6 text-blue-300 mb-1">Nestle Original Coffee-Mate Coffee Creamer</div>
+                      <div class="text-heading6 text-blue-300 mb-1">Nestle Original Coffee-Mate Coffee Creamer</div>
                       <div class="flex gap-4">
                         <ul class="flex gap-1">
                           <li class="flex"><i class="icon-star-full text-[12px]"></i></li>
@@ -1191,8 +1494,8 @@
                       </div>
                     </div>
                     <div>
-                      <span class="font-quickSand text-heading5 text-green-200">$2.51</span>
-                      <span class="font-quickSand text-heading-sm line-through text-gray-500">$2.80</span>
+                      <span class="text-heading5 text-green-200">$2.51</span>
+                      <span class="text-heading-sm line-through text-gray-500">$2.80</span>
                     </div>
                   </div>
                 </div>
@@ -1200,7 +1503,7 @@
                   <img src="../assets/images/products/orange-fruit.png" width="120" height="120" />
                   <div class="flex flex-col justify-between">
                     <div>
-                      <div class="font-quickSand text-heading6 text-blue-300 mb-1">Nestle Original Coffee-Mate Coffee Creamer</div>
+                      <div class="text-heading6 text-blue-300 mb-1">Nestle Original Coffee-Mate Coffee Creamer</div>
                       <div class="flex gap-4">
                         <ul class="flex gap-1">
                           <li class="flex"><i class="icon-star-full text-[12px]"></i></li>
@@ -1213,21 +1516,21 @@
                       </div>
                     </div>
                     <div>
-                      <span class="font-quickSand text-heading5 text-green-200">$2.51</span>
-                      <span class="font-quickSand text-heading-sm line-through text-gray-500">$2.80</span>
+                      <span class="text-heading5 text-green-200">$2.51</span>
+                      <span class="text-heading-sm line-through text-gray-500">$2.80</span>
                     </div>
                   </div>
                 </div>
               </div>
             </div>
             <div class="swiper-slide">
-              <h3 class="font-quickSand text-heading6 md:text-heading5 lg:text-heading4 xl:text-heading3 text-blue-300 mb-[30px]">Trending Products</h3>
+              <h3 class="text-heading6 md:text-heading5 lg:text-heading4 xl:text-heading3 text-blue-300 mb-[30px]">Trending Products</h3>
               <div class="flex flex-col gap-6">
                 <div class="flex gap-3 lg:gap-5">
                   <img src="../assets/images/products/pomegranate.png" width="120" height="120" />
                   <div class="flex flex-col justify-between">
                     <div>
-                      <div class="font-quickSand text-heading6 text-blue-300 mb-1">Nestle Original Coffee-Mate Coffee Creamer</div>
+                      <div class="text-heading6 text-blue-300 mb-1">Nestle Original Coffee-Mate Coffee Creamer</div>
                       <div class="flex gap-4">
                         <ul class="flex gap-1">
                           <li class="flex"><i class="icon-star-full text-[12px]"></i></li>
@@ -1240,8 +1543,8 @@
                       </div>
                     </div>
                     <div>
-                      <span class="font-quickSand text-heading5 text-green-200">$2.51</span>
-                      <span class="font-quickSand text-heading-sm line-through text-gray-500">$2.80</span>
+                      <span class="text-heading5 text-green-200">$2.51</span>
+                      <span class="text-heading-sm line-through text-gray-500">$2.80</span>
                     </div>
                   </div>
                 </div>
@@ -1249,7 +1552,7 @@
                   <img src="../assets/images/products/bread.png" width="120" height="120" />
                   <div class="flex flex-col justify-between">
                     <div>
-                      <div class="font-quickSand text-heading6 text-blue-300 mb-1">Nestle Original Coffee-Mate Coffee Creamer</div>
+                      <div class="text-heading6 text-blue-300 mb-1">Nestle Original Coffee-Mate Coffee Creamer</div>
                       <div class="flex gap-4">
                         <ul class="flex gap-1">
                           <li class="flex"><i class="icon-star-full text-[12px]"></i></li>
@@ -1262,8 +1565,8 @@
                       </div>
                     </div>
                     <div>
-                      <span class="font-quickSand text-heading5 text-green-200">$2.51</span>
-                      <span class="font-quickSand text-heading-sm line-through text-gray-500">$2.80</span>
+                      <span class="text-heading5 text-green-200">$2.51</span>
+                      <span class="text-heading-sm line-through text-gray-500">$2.80</span>
                     </div>
                   </div>
                 </div>
@@ -1271,7 +1574,7 @@
                   <img src="../assets/images/products/baby-corn.png" width="120" height="120" />
                   <div class="flex flex-col justify-between">
                     <div>
-                      <div class="font-quickSand text-heading6 text-blue-300 mb-1">Nestle Original Coffee-Mate Coffee Creamer</div>
+                      <div class="text-heading6 text-blue-300 mb-1">Nestle Original Coffee-Mate Coffee Creamer</div>
                       <div class="flex gap-4">
                         <ul class="flex gap-1">
                           <li class="flex"><i class="icon-star-full text-[12px]"></i></li>
@@ -1284,21 +1587,21 @@
                       </div>
                     </div>
                     <div>
-                      <span class="font-quickSand text-heading5 text-green-200">$2.51</span>
-                      <span class="font-quickSand text-heading-sm line-through text-gray-500">$2.80</span>
+                      <span class="text-heading5 text-green-200">$2.51</span>
+                      <span class="text-heading-sm line-through text-gray-500">$2.80</span>
                     </div>
                   </div>
                 </div>
               </div>
             </div>
             <div class="swiper-slide">
-              <h3 class="font-quickSand text-heading6 md:text-heading5 lg:text-heading4 xl:text-heading3 text-blue-300 mb-[30px]">Recently added</h3>
+              <h3 class="text-heading6 md:text-heading5 lg:text-heading4 xl:text-heading3 text-blue-300 mb-[30px]">Recently added</h3>
               <div class="flex flex-col gap-6">
                 <div class="flex gap-3 lg:gap-5">
                   <img src="../assets/images/products/mango-juice.png" width="120" height="120" />
                   <div class="flex flex-col justify-between">
                     <div>
-                      <div class="font-quickSand text-heading6 text-blue-300 mb-1">Nestle Original Coffee-Mate Coffee Creamer</div>
+                      <div class="text-heading6 text-blue-300 mb-1">Nestle Original Coffee-Mate Coffee Creamer</div>
                       <div class="flex gap-4">
                         <ul class="flex gap-1">
                           <li class="flex"><i class="icon-star-full text-[12px]"></i></li>
@@ -1311,8 +1614,8 @@
                       </div>
                     </div>
                     <div>
-                      <span class="font-quickSand text-heading5 text-green-200">$2.51</span>
-                      <span class="font-quickSand text-heading-sm line-through text-gray-500">$2.80</span>
+                      <span class="text-heading5 text-green-200">$2.51</span>
+                      <span class="text-heading-sm line-through text-gray-500">$2.80</span>
                     </div>
                   </div>
                 </div>
@@ -1320,7 +1623,7 @@
                   <img src="../assets/images/products/watter-melon.png" width="120" height="120" />
                   <div class="flex flex-col justify-between">
                     <div>
-                      <div class="font-quickSand text-heading6 text-blue-300 mb-1">Nestle Original Coffee-Mate Coffee Creamer</div>
+                      <div class="text-heading6 text-blue-300 mb-1">Nestle Original Coffee-Mate Coffee Creamer</div>
                       <div class="flex gap-4">
                         <ul class="flex gap-1">
                           <li class="flex"><i class="icon-star-full text-[12px]"></i></li>
@@ -1333,8 +1636,8 @@
                       </div>
                     </div>
                     <div>
-                      <span class="font-quickSand text-heading5 text-green-200">$2.51</span>
-                      <span class="font-quickSand text-heading-sm line-through text-gray-500">$2.80</span>
+                      <span class="text-heading5 text-green-200">$2.51</span>
+                      <span class="text-heading-sm line-through text-gray-500">$2.80</span>
                     </div>
                   </div>
                 </div>
@@ -1342,7 +1645,7 @@
                   <img src="../assets/images/products/mango-packet.png" width="120" height="120" />
                   <div class="flex flex-col justify-between">
                     <div>
-                      <div class="font-quickSand text-heading6 text-blue-300 mb-1">Nestle Original Coffee-Mate Coffee Creamer</div>
+                      <div class="text-heading6 text-blue-300 mb-1">Nestle Original Coffee-Mate Coffee Creamer</div>
                       <div class="flex gap-4">
                         <ul class="flex gap-1">
                           <li class="flex"><i class="icon-star-full text-[12px]"></i></li>
@@ -1355,22 +1658,21 @@
                       </div>
                     </div>
                     <div>
-                      <span class="font-quickSand text-heading5 text-green-200">$2.51</span>
-                      <span class="font-quickSand text-heading-sm line-through text-gray-500">$2.80</span>
+                      <span class="text-heading5 text-green-200">$2.51</span>
+                      <span class="text-heading-sm line-through text-gray-500">$2.80</span>
                     </div>
                   </div>
                 </div>
               </div>
             </div>
-
             <div class="swiper-slide">
-              <h3 class="font-quickSand text-heading6 md:text-heading5 lg:text-heading4 xl:text-heading3 text-blue-300 mb-[30px]">Top Rated</h3>
+              <h3 class="text-heading6 md:text-heading5 lg:text-heading4 xl:text-heading3 text-blue-300 mb-[30px]">Top Rated</h3>
               <div class="flex flex-col gap-6">
                 <div class="flex gap-3 lg:gap-5">
                   <img src="../assets/images/products/mangus.png" width="120" height="120" />
                   <div class="flex flex-col justify-between">
                     <div>
-                      <div class="font-quickSand text-heading6 text-blue-300 mb-1">Nestle Original Coffee-Mate Coffee Creamer</div>
+                      <div class="text-heading6 text-blue-300 mb-1">Nestle Original Coffee-Mate Coffee Creamer</div>
                       <div class="flex gap-4">
                         <ul class="flex gap-1">
                           <li class="flex"><i class="icon-star-full text-[12px]"></i></li>
@@ -1383,8 +1685,8 @@
                       </div>
                     </div>
                     <div>
-                      <span class="font-quickSand text-heading5 text-green-200">$2.51</span>
-                      <span class="font-quickSand text-heading-sm line-through text-gray-500">$2.80</span>
+                      <span class="text-heading5 text-green-200">$2.51</span>
+                      <span class="text-heading-sm line-through text-gray-500">$2.80</span>
                     </div>
                   </div>
                 </div>
@@ -1392,7 +1694,7 @@
                   <img src="../assets/images/products/paprika.png" width="120" height="120" />
                   <div class="flex flex-col justify-between">
                     <div>
-                      <div class="font-quickSand text-heading6 text-blue-300 mb-1">Nestle Original Coffee-Mate Coffee Creamer</div>
+                      <div class="text-heading6 text-blue-300 mb-1">Nestle Original Coffee-Mate Coffee Creamer</div>
                       <div class="flex gap-4">
                         <ul class="flex gap-1">
                           <li class="flex"><i class="icon-star-full text-[12px]"></i></li>
@@ -1405,8 +1707,8 @@
                       </div>
                     </div>
                     <div>
-                      <span class="font-quickSand text-heading5 text-green-200">$2.51</span>
-                      <span class="font-quickSand text-heading-sm line-through text-gray-500">$2.80</span>
+                      <span class="text-heading5 text-green-200">$2.51</span>
+                      <span class="text-heading-sm line-through text-gray-500">$2.80</span>
                     </div>
                   </div>
                 </div>
@@ -1414,7 +1716,7 @@
                   <img src="../assets/images/products/bottle.png" width="120" height="120" />
                   <div class="flex flex-col justify-between">
                     <div>
-                      <div class="font-quickSand text-heading6 text-blue-300 mb-1">Nestle Original Coffee-Mate Coffee Creamer</div>
+                      <div class="text-heading6 text-blue-300 mb-1">Nestle Original Coffee-Mate Coffee Creamer</div>
                       <div class="flex gap-4">
                         <ul class="flex gap-1">
                           <li class="flex"><i class="icon-star-full text-[12px]"></i></li>
@@ -1427,8 +1729,8 @@
                       </div>
                     </div>
                     <div>
-                      <span class="font-quickSand text-heading5 text-green-200">$2.51</span>
-                      <span class="font-quickSand text-heading-sm line-through text-gray-500">$2.80</span>
+                      <span class="text-heading5 text-green-200">$2.51</span>
+                      <span class="text-heading-sm line-through text-gray-500">$2.80</span>
                     </div>
                   </div>
                 </div>
@@ -1438,21 +1740,19 @@
           <div class="swiper-pagination"></div>
         </div>
       </section>
+    </main>
 
-      <!--Banner section-->
-      <section class="mb-[68px] container">
+    <!--footer-->
+    <footer class="container mb-[68px]">
+      <div class="mb-[68px]">
         <div class="rounded-[6px] md:rounded-[14px] lg:rounded-[30px] bg-hero-pattern bg-[rgba(59,128,126,.2)] bg-opacity-20 bg-cover bg-top bg-no-repeat flex justify-between items-center mt-[38px] relative">
           <div class="min-h-[160px] pl-3 pt-3 sm:pl-4 sm:pt4 md:pl-6 md:pt-6 lg:pl-10 lg:py-10 xl:pl-14 xl:py-14 2xl:py-[72px] 2xl:pl-[72px]">
-            <h2 class="max-w-[60%] font-quickSand text-heading5 sm:text-heading4 md:text-heading3 lg:text-heading2 tracking-[-0.04%] text-blue-300">Stay home & get your daily needs from our shop</h2>
+            <h2 class="max-w-[60%] text-heading5 sm:text-heading4 md:text-heading3 lg:text-heading2 tracking-[-0.04%] text-blue-300">Stay home & get your daily needs from our shop</h2>
             <div class="font-lato text-large tracking-[-0.04%] text-[#2B3D34] mt-8 hidden lg:block">Start Your Daily Sopping with Nest Mart</div>
           </div>
           <img src="../assets/images/Screenshot (76).png" class="absolute bottom-0 right-0 sm:h-full h-3/4" />
         </div>
-      </section>
-    </main>
-
-    <footer class="container mb-[68px]">
-      <!--footer-->
+      </div>
       <div class="flex flex-col md:flex-row justify-between flex-wrap gap-[16px] divide-y-2 md:divide-y-0 mb-[70px]">
         <div class="max-w-[346px]">
           <img src="../assets/images/Logo.png" alt="logo" width="215" height="66" />
@@ -1475,7 +1775,7 @@
           </div>
         </div>
         <div class="pt-4 md:pt-0">
-          <div class="flex font-quickSand text-heading6 md:text-heading5 lg:text-heading4 xl:text-heading4 text-blue-300 toggle">Company <i class="icon-down-dark text-[24px] inline-block sm:hidden"></i></div>
+          <div class="flex text-heading6 md:text-heading5 lg:text-heading4 xl:text-heading4 text-blue-300 toggle">Company <i class="icon-down-dark text-[24px] inline-block sm:hidden"></i></div>
           <ul class="hidden md:flex flex-col gap-2.5">
             <li class="font-lato text-medium text-blue-300 mt-4 lg:mt-6"><a href="#">About Us</a></li>
             <li class="font-lato text-medium text-blue-300"><a href="#">Delivery Information</a></li>
@@ -1487,7 +1787,7 @@
           </ul>
         </div>
         <div class="pt-4 md:pt-0">
-          <div class="flex font-quickSand text-heading6 md:text-heading5 lg:text-heading4 xl:text-heading4 text-blue-300 toggle">Information <i class="icon-down-dark text-[24px] inline-block sm:hidden"></i></div>
+          <div class="flex text-heading6 md:text-heading5 lg:text-heading4 xl:text-heading4 text-blue-300 toggle">Information <i class="icon-down-dark text-[24px] inline-block sm:hidden"></i></div>
           <ul class="hidden md:flex flex-col gap-2.5">
             <li class="font-lato text-medium text-blue-300 mt-4 lg:mt-6"><a href="#">Search Terms</a></li>
             <li class="font-lato text-medium text-blue-300"><a href="#">Advanced Search</a></li>
@@ -1498,7 +1798,7 @@
           </ul>
         </div>
         <div class="pt-4 md:pt-0">
-          <div class="font-quickSand text-heading6 md:text-heading5 lg:text-heading4 xl:text-heading4 text-blue-300">App & Payment</div>
+          <div class="text-heading6 md:text-heading5 lg:text-heading4 xl:text-heading4 text-blue-300">App & Payment</div>
           <div class="font-lato text-small text-blue-300 mt-4 lg:mt-6">Install NetMart App from App Store or Google Play</div>
           <div class="flex items-center gap-6 justify-center xl:justify-start pt-4 lg:pt-5">
             <a href="#"><img src="../assets/images/va724oeh 1.png" alt="Download app from apple store" width="129" height="39" /></a>

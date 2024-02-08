@@ -6,12 +6,12 @@
     box-sizing: border-box;
   }
 
-  body {
-    position: relative;
+  html {
     font-family: Quicksand, sans-serif;
   }
-  input[type='checkbox'] {
-    accent-color: #3bb77e;
+
+  body {
+    position: relative;
   }
 }
 @layer components {
@@ -84,5 +84,8 @@
   select:-webkit-autofill:hover,
   select:-webkit-autofill:focus {
     transition: background-color 9999999s ease-in-out 0s; /*this will make background color transparent in auto fill*/
+  }
+  input[type='checkbox'] {
+    accent-color: #3bb77e;
   }
 }
